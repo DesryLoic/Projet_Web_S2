@@ -4,6 +4,7 @@
 - paysages touristiques/naturels
 - événements historiques
 
+
 ### Onglets
 #### 1. Accueil
 Présentation générale du Japon avec une image en arrière-plan d'un paysage (mont Fuji/Tokyo etc)
@@ -14,7 +15,8 @@ Carrousel d'images de paysages et monuments célèbres
 #### 3. Histoire
 #### 4. Articles : 2 sous-catégories --> tourisme ; histoire
 
-### Direction artitique
+
+### Direction artistique
 #### Couleurs
 - rouge #F62828 ou #C70039
 - blanc : #F3EEE3
