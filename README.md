@@ -7,7 +7,7 @@
 ### Onglets
 - Accueil
 - Carte interactive
-- Frise chronologique
+- Histoire
 - Articles : 2 sous-catégories --> tourisme ; histoire
 
 ### Direction artitique
