@@ -4,6 +4,12 @@
 - paysages touristiques/naturels
 - événements historiques
 
+### Onglets
+- Accueil
+- Carte interactive
+- Frise chronologique
+- Articles : 2 sous-catégories --> tourisme ; histoire
+
 ### Direction artitique
 #### Couleurs
 - rouge #F62828 ou #C70039
