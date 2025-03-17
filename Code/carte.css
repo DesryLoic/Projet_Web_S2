@@ -1,6 +1,6 @@
 .map__image{
     margin-top: 20px;
-    width: 50vw;
+    width: 50%;
     float: left;
     margin-bottom: -20px;
 }
@@ -15,7 +15,7 @@
  }
 .map__list{
     float: right;
-    width: 40vw;
+    width: 50%;
 }
 
 .map__list a{
