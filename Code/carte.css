@@ -21,3 +21,114 @@
     text-decoration: none;
     transition:color 0.3s;
 }
+
+/*style pour la classe carousel*/
+.carousel {
+    position: relative;
+    margin-top: 26px;
+  }
+  /*style pour la classe carousel-inner*/
+  .carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  /*style pour n'importe quel bouton radio(<input type="radio">),case à cocher(<input type="checkbox">)
+   ou option(<option> d'un élément <select>) de la classe carousel-open ainsi que pour les éléments de la classe carousel-item */
+  .carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+  }
+  /*style pour la classe carousel-item*/
+  .carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+  }
+  /*style pour les images dans la classe carousel-item*/
+  .carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  /*style pour les éléments de la classe carousel-control*/
+  .carousel-control {
+    margin-top: 5%;
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+  }
+  /*décalage de 2% à gauche pour les éléments de la classe carousel-control ayant un "prev" dans le nom de la classe*/
+  .carousel-control.prev {
+    left: 2%;
+  }
+  /*décalage de 2% à droite pour les éléments de la classe carousel-control ayant un "next" dans le nom de la classe*/
+  .carousel-control.next {
+    right: 2%;
+  }
+  /*changement de couleur lorsqu'on passe la souris par dessus un élément de la classe carousel-control*/
+  .carousel-control:hover {
+    color: #aaaaaa;
+  }
+  
+  /*passage en display:block pour les éléments listés ci-dessous*/
+  #carousel-1:checked ~ .control-1,
+  #carousel-2:checked ~ .control-2,
+  #carousel-3:checked ~ .control-3,
+  #carousel-4:checked ~ .control-4,
+  #carousel-5:checked ~ .control-5,
+  #carousel-6:checked ~ .control-6 {
+    display: block;
+  }
+  /*style pour les éléments de la classe carousel-indicators*/
+  .carousel-indicators {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+  }
+  /*style pour les listes de la classe carousel-indicators*/
+  .carousel-indicators li {
+      display: inline-block;
+      margin: 0 5px;
+  }
+  /*style pour les éléments de la classe carousel-bullet*/
+  .carousel-bullet {
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-size: 35px;
+  }
+  /*changement de couleur lorsqu'on passe la souris par dessus un élément de la classe carousel-bullet*/
+  .carousel-bullet:hover {
+      color: #aaaaaa;
+  }
+  /*style pour les images*/
+  img {
+      margin-top: 10%;
+      max-width: 100%;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+  }

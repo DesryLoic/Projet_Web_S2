@@ -36,14 +36,42 @@
                     <li><a href="https://google.com/?q=I" id="list-I">Region I</a></li>
                 </ul>
                 
-                
-                
-                
-                
-                
-                
-                
-                
+            </div>
+        </div>
+        <div class="carousel">
+            <div class="carousel-inner">
+            <!-- Chaque image est associée à un bouton radio pour passer d'une image à l'autre -->
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                <div class="carousel-item">
+                    <img src="../img/image1.jpg" alt="carrousel 1">
+                </div>
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item">
+                    <img src="../img/image2.jpg" alt="carrousel 2">
+                </div>
+                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item">
+                    <img src="../img/image3.jpg" alt="carrousel 3">
+                </div>
+                <!-- Les balises label sont utilisées comme contrôles précédent/suivant pour chaque image -->
+                <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+                <label for="carousel-2" class="carousel-control next control-1">›</label>
+                <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                <label for="carousel-3" class="carousel-control next control-2">›</label>
+                <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+                <label for="carousel-1" class="carousel-control next control-3">›</label>
+                <!-- La liste ordonnée (ol) permet d'accéder au choix à chaque image du caroussel -->
+                <ol class="carousel-indicators">
+                    <li>
+                        <label for="carousel-1" class="carousel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carousel-2" class="carousel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carousel-3" class="carousel-bullet">•</label>
+                    </li>
+                </ol>
             </div>
         </div>
     </body>
