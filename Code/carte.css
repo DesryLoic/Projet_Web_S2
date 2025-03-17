@@ -1,6 +1,8 @@
 .map__image{
-    width: 100%;
+    margin-top: 20px;
+    width: 50vw;
     float: left;
+    margin-bottom: -20px;
 }
 .map__image path{
    fill: #e89680;
@@ -13,7 +15,7 @@
  }
 .map__list{
     float: right;
-    width: 50%;
+    width: 40vw;
 }
 
 .map__list a{
@@ -24,8 +26,7 @@
 
 /*style pour la classe carousel*/
 .carousel {
-    position: relative;
-    margin-top: 26px;
+    clear: both;
     width: 50%;
     height:400px;
   }
