@@ -26,12 +26,13 @@
 .carousel {
     position: relative;
     margin-top: 26px;
+    width: 50%;
+    height:400px;
   }
   /*style pour la classe carousel-inner*/
   .carousel-inner {
     position: relative;
     overflow: hidden;
-    width: 100%;
   }
   /*style pour n'importe quel bouton radio(<input type="radio">),case à cocher(<input type="checkbox">)
    ou option(<option> d'un élément <select>) de la classe carousel-open ainsi que pour les éléments de la classe carousel-item */
@@ -49,8 +50,9 @@
   /*style pour les images dans la classe carousel-item*/
   .carousel-item img {
     display: block;
-    height: auto;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   /*style pour les éléments de la classe carousel-control*/
   .carousel-control {
