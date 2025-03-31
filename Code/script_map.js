@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const regions = document.querySelectorAll(".map__image a");
+    const regionLinks = document.querySelectorAll(".map__list a");
     let activeRegion = null;
     
     // Création de la boîte d'infos
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Hiroshima": "Hiroshima est une ville symbole de paix avec le Mémorial de la Paix et l'île de Miyajima à proximité.",
         "Fukuoka": "Fukuoka est une ville portuaire dynamique avec une scène culinaire réputée et de nombreux festivals."
     };
-
+    
     regions.forEach(region => {
         const path = region.querySelector("path");
         const regionName = region.getAttribute("xlink:title");
@@ -51,8 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
             tooltip.style.border = "1px solid black";
             tooltip.style.padding = "5px";
             tooltip.style.fontSize = "12px";
-            tooltip.style.left = `${region.offsetLeft + 10}px`;
-            tooltip.style.top = `${region.offsetTop - 20}px`;
+            const map = document.querySelector(".map__image"); // Sélectionne la carte
+            const mapRect = map.getBoundingClientRect(); // Position de la carte
+            tooltip.style.left = `${mapRect.left + 10}px`; // Position à gauche de la carte
+            tooltip.style.top = `${mapRect.top + 10}px`; // Position en haut de la carte       
             tooltip.id = "region-tooltip";
             document.body.appendChild(tooltip);
         });
@@ -76,6 +79,28 @@ document.addEventListener("DOMContentLoaded", function () {
             infoBox.innerHTML = `<strong>${regionName}</strong><br>${description}`;
             infoBox.style.display = "block";
         });
+        
+        regionLinks.forEach(link => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault(); // Empêche le lien de rediriger
+                const regionName = this.textContent.trim(); // Récupère directement le texte du lien (nom de la région)
+        
+                const region = [...regions].find(r => r.getAttribute("xlink:title") === regionName);
+                
+                if (region) {
+                    if (activeRegion) {
+                        activeRegion.querySelector("path").style.fill = "#e89680"; // Réinitialisation de la couleur
+                    }
+                    activeRegion = region;
+                    const path = region.querySelector("path");
+                    path.style.fill = "#b42b18"; // Couleur après clic
+        
+                    const description = regionDescriptions[regionName] || "Pas d'informations disponibles.";
+                    infoBox.innerHTML = `<strong>${regionName}</strong><br>${description}`;
+                    infoBox.style.display = "block";
+                }
+            });
+        });
     });
     // Ajout des interactions pour les torii (villes)
     const toriiIcons = document.querySelectorAll(".torii");
@@ -92,8 +117,12 @@ document.addEventListener("DOMContentLoaded", function () {
             tooltip.style.border = "1px solid black";
             tooltip.style.padding = "5px";
             tooltip.style.fontSize = "12px";
-            tooltip.style.left = `${torii.offsetLeft + 10}px`;
-            tooltip.style.top = `${torii.offsetTop - 20}px`;
+            const map = document.querySelector(".map__image"); // Sélectionne la carte
+            const mapRect = map.getBoundingClientRect(); // Position de la carte
+            const toriiRect = torii.getBoundingClientRect(); // Position du Torii
+
+            tooltip.style.left = `${mapRect.left + 10}px`; // Position à gauche de la carte
+            tooltip.style.top = `${mapRect.top + 10}px`; // Position en haut de la carte       
             tooltip.id = "city-tooltip";
             document.body.appendChild(tooltip);
         });

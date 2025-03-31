@@ -1,8 +1,13 @@
+.map {
+  display: flex;
+  flex-direction: column; /* Met les éléments en colonne */
+  align-items: center; /* Centre la carte et la liste */
+}
+
 .map__image{
     margin-top: 20px;
-    width: 50%;
     float: left;
-    margin-bottom: -20px;
+    width: 50%;
 }
 .map__image path{
    fill: #e89680;
@@ -14,15 +19,63 @@
     fill: #d4331e;
  }
 .map__list{
-    float: right;
-    width: 50%;
+    text-align: center; 
+    margin-bottom: 50px;
+    width: 100%;
+}
+.map__list ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permet le retour à la ligne si trop long */
 }
 
-.map__list a{
-    color: inherit;
-    text-decoration: none;
-    transition:color 0.3s;
+.map__list li {
+  margin: 5px 15px; /* Espacement entre les noms */
+  font-weight: bold;
 }
+
+.map__list a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+/* Couleurs différentes pour chaque région */
+#list-A { color: #e74c3c; } /* Chubu */
+#list-B { color: #3498db; } /* Chugoku */
+#list-C { color: #2ecc71; } /* Hokkaido */
+#list-D { color: #f1c40f; } /* Kanto */
+#list-E { color: #9b59b6; } /* Kinki */
+#list-F { color: #1abc9c; } /* Kyushu */
+#list-G { color: #e67e22; } /* Okinawa */
+#list-H { color: #34495e; } /* Shikoku */
+#list-I { color: #d35400; } /* Tohoku */
+
+.map__list a:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Effet au survol */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*style pour la classe carousel*/
 .carousel {
