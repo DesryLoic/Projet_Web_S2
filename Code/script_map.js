@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const regions = document.querySelectorAll(".map__image a");
     let activeRegion = null;
     
-    // Création de la boîte d'infos du kitsune
+    // Création de la boîte d'infos
     const infoBox = document.createElement("div");
     infoBox.id = "kitsune-info";
     infoBox.style.position = "fixed";
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     infoBox.style.border = "2px solid black";
     infoBox.style.display = "none";
     document.body.appendChild(infoBox);
-
+    // Dictionnaire des descriptions par région
     const regionDescriptions = {
         "Hokkaido": "Hokkaido est la région la plus septentrionale du Japon, célèbre pour ses paysages enneigés et sa faune sauvage.",
         "Tohoku": "Tohoku est une région montagneuse, connue pour ses sources chaudes et ses festivals traditionnels.",
@@ -43,12 +43,26 @@ document.addEventListener("DOMContentLoaded", function () {
             if (region !== activeRegion) {
                 path.style.fill = "#d4331e"; // Couleur au survol
             }
+            const tooltip = document.createElement("div");
+            tooltip.classList.add("tooltip");
+            tooltip.innerText = regionName;
+            tooltip.style.position = "absolute";
+            tooltip.style.background = "white";
+            tooltip.style.border = "1px solid black";
+            tooltip.style.padding = "5px";
+            tooltip.style.fontSize = "12px";
+            tooltip.style.left = `${region.offsetLeft + 10}px`;
+            tooltip.style.top = `${region.offsetTop - 20}px`;
+            tooltip.id = "region-tooltip";
+            document.body.appendChild(tooltip);
         });
 
         region.addEventListener("mouseleave", () => {
             if (region !== activeRegion) {
                 path.style.fill = "#e89680"; // Revenir à la couleur de base
             }
+            const tooltip = document.getElementById("region-tooltip");
+            if (tooltip) tooltip.remove();
         });
 
         region.addEventListener("click", () => {
@@ -90,6 +104,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         torii.addEventListener("click", () => {
+            if (activeRegion) {
+                activeRegion.querySelector("path").style.fill = "#e89680";
+            }
+            activeRegion = null;
             const description = cityDescriptions[cityName] || "Pas d'informations disponibles.";
             infoBox.innerHTML = `<strong>${cityName}</strong><br>${description}`;
             infoBox.style.display = "block";
