@@ -76,10 +76,11 @@ document.addEventListener("DOMContentLoaded", function () {
             path.style.fill = "#b42b18"; // Couleur active après clic
             
             const description = regionDescriptions[regionName] || "Pas d'informations disponibles.";
-            infoBox.innerHTML = `<strong>${regionName}</strong><br>${description}`;
+            const detailsLink = `<br><a href="details.html?region=${encodeURIComponent(regionName)}" target="_blank">Cliquez ici pour en savoir plus</a>`;
+            infoBox.innerHTML = `<strong>${regionName}</strong><br>${description}${detailsLink}`;
             infoBox.style.display = "block";
         });
-        
+
         regionLinks.forEach(link => {
             link.addEventListener("click", function (event) {
                 event.preventDefault(); // Empêche le lien de rediriger
@@ -96,7 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     path.style.fill = "#b42b18"; // Couleur après clic
         
                     const description = regionDescriptions[regionName] || "Pas d'informations disponibles.";
-                    infoBox.innerHTML = `<strong>${regionName}</strong><br>${description}`;
+                    const detailsLink = `<br><a href="details.html?region=${encodeURIComponent(regionName)}" target="_blank">Cliquez ici pour en savoir plus</a>`;
+                    infoBox.innerHTML = `<strong>${regionName}</strong><br>${description}${detailsLink}`;
                     infoBox.style.display = "block";
                 }
             });

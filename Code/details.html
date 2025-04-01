@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de la région</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            background-size: cover;
+            background-position: center;
+            background-position: top center; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        #overlay {
+            background: rgba(0, 0, 0, 0.5); /* Assombrit l'image pour améliorer la lisibilité */
+            color: white;
+            padding: 50px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #region-title {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        #region-description {
+            margin-top: 10px;
+            font-size: 20px;
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="overlay">
+        <h1 id="region-title">Région</h1>
+        <p id="region-description">Description ici...</p>
+    </div>
+
+    <script>
+        // 1️⃣ Récupère le paramètre "region" dans l'URL
+        const params = new URLSearchParams(window.location.search);
+        const regionName = params.get("region");
+
+        // 2️⃣ Liste des descriptions par région
+        const regionData = {
+            "Hokkaido": {
+                description: "Hokkaido est la région la plus septentrionale du Japon, célèbre pour ses paysages enneigés et sa faune sauvage."
+            },
+            "Tohoku": {
+                description: "Tohoku est une région montagneuse, connue pour ses sources chaudes et ses festivals traditionnels."
+            },
+            "Kanto": {
+                description: "Kanto abrite Tokyo, la capitale du Japon, ainsi que Yokohama et d'autres grandes villes."
+            },
+            "Chubu": {
+                description: "Chubu est une région variée, avec les Alpes japonaises et la ville historique de Nagoya."
+            },
+            "Kansai": {
+                description: "Kansai est le cœur culturel du Japon avec Kyoto, Osaka et Nara, riches en histoire."
+            },
+            "Chugoku": {
+                description: "Chugoku est connue pour Hiroshima et le sanctuaire de Miyajima."
+            },
+            "Shikoku": {
+                description: "Shikoku est célèbre pour son pèlerinage des 88 temples et ses paysages côtiers."
+            },
+            "Kyushu": {
+                description: "Kyushu offre une nature luxuriante, des sources chaudes et la ville historique de Nagasaki."
+            },
+            "Okinawa": {
+                description: "Okinawa est un paradis tropical avec des plages magnifiques et une culture unique."
+            }
+        };
+
+        // 3️⃣ Met à jour la page en fonction de la région
+        if (regionName && regionData[regionName]) {
+            document.getElementById("region-title").textContent = regionName;
+            document.getElementById("region-description").textContent = regionData[regionName].description;
+
+            // Ajoute l'image de fond
+            document.body.style.backgroundImage = `url('../img/img_regions/${regionName}_background.jpg')`;
+        } else {
+            document.getElementById("region-title").textContent = "Région inconnue";
+            document.getElementById("region-description").textContent = "Aucune information disponible.";
+            document.body.style.backgroundImage = "url('../img/img_regions/default_background.jpg')";
+        }
+    </script>
+
+</body>
+</html>
