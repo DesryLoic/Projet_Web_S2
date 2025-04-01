@@ -14,10 +14,4 @@ Carrousel d'images de paysages et monuments célèbres
 #### 2. Lieux touristiques (avec Carte interactive)
 #### 3. Histoire
 #### 4. Articles : 2 sous-catégories --> tourisme ; histoire
-
-
-### Direction artistique
-#### Couleurs
-- rouge #F62828 ou #C70039
-- blanc : #F3EEE3
              
