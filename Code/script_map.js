@@ -29,11 +29,23 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     // Dictionnaire des descriptions par ville
     const cityDescriptions = {
-        "Tokyo": "Tokyo est la capitale du Japon, un centre économique et culturel majeur avec une vie urbaine trépidante.",
-        "Kyoto": "Kyoto est célèbre pour ses temples, ses jardins et son héritage culturel préservé.",
-        "Osaka": "Osaka est connue pour sa cuisine de rue, son château et son ambiance dynamique.",
-        "Hiroshima": "Hiroshima est une ville symbole de paix avec le Mémorial de la Paix et l'île de Miyajima à proximité.",
-        "Fukuoka": "Fukuoka est une ville portuaire dynamique avec une scène culinaire réputée et de nombreux festivals."
+        "Nara":"",
+        "Osaka":"Osaka est connue pour sa cuisine de rue, son château et son ambiance dynamique.",
+        "Hiroshima":"Hiroshima est une ville symbole de paix avec le Mémorial de la Paix et l'île de Miyajima à proximité.",
+        "Nagasaki":"",
+        "Tokyo":"Tokyo est la capitale du Japon, un centre économique et culturel majeur avec une vie urbaine trépidante.",
+        "Kyoto":"Kyoto est célèbre pour ses temples, ses jardins et son héritage culturel préservé.",
+        "Sapporo":"",
+        "Kobe":"",
+        "Fukuoka":"Fukuoka est une ville portuaire dynamique avec une scène culinaire réputée et de nombreux festivals.",
+        "Fukushima":"",
+        "Kumamoto":"",
+        "Yokohama":"",
+        "Kawasaki":"",
+        "Nagano":"",
+        "Kanazawa":"",
+        "Hakodate":"",
+        "Asahikawa":""
     };
     
     regions.forEach(region => {
