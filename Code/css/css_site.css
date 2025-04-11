@@ -5,7 +5,12 @@ body {
     background-color: #f3eeee;
     color: #3e3e3e;
 }
-
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
 #ma-barre-de-navigation {
     position: absolute;
     width: 100%;
@@ -22,13 +27,6 @@ body {
 #ma-barre-de-navigation.fixe {
     position: fixed;
     top: 0;
-}
-
-header {
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
 }
 
 .header-top {
