@@ -4,29 +4,23 @@ document.addEventListener("DOMContentLoaded", function () {
     let activeRegion = null;
     
     // Création de la boîte d'infos
-    const infoBox = document.createElement("div");
-    infoBox.id = "kitsune-info";
-    infoBox.style.position = "fixed";
-    infoBox.style.fontSize = "10px";
-    infoBox.style.bottom = "20px";
-    infoBox.style.right = "20px";
-    infoBox.style.background = "white";
-    infoBox.style.padding = "10px";
-    infoBox.style.border = "2px solid black";
-    infoBox.style.display = "none";
-    document.body.appendChild(infoBox);
+    const infoBox = document.querySelector("#chat-bubble");
+
+
     // Dictionnaire des descriptions par région
     const regionDescriptions = {
-        "Hokkaido": "Hokkaido est la région la plus septentrionale du Japon, célèbre pour ses paysages enneigés et sa faune sauvage.",
-        "Tohoku": "Tohoku est une région montagneuse, connue pour ses sources chaudes et ses festivals traditionnels.",
-        "Kanto": "Kanto abrite Tokyo, la capitale du Japon, ainsi que Yokohama et d'autres grandes villes.",
-        "Chubu": "Chubu est une région variée, avec les Alpes japonaises et la ville historique de Nagoya.",
-        "Kansai": "Kansai est le cœur culturel du Japon avec Kyoto, Osaka et Nara, riches en histoire.",
-        "Chugoku": "Chugoku est connue pour Hiroshima et le sanctuaire de Miyajima.",
-        "Shikoku": "Shikoku est célèbre pour son pèlerinage des 88 temples et ses paysages côtiers.",
-        "Kyushu": "Kyushu offre une nature luxuriante, des sources chaudes et la ville historique de Nagasaki.",
-        "Okinawa": "Okinawa est un paradis tropical avec des plages magnifiques et une culture unique."
+        "Chubu": "Située entre Tokyo et Kyoto, Chūbu combine montagnes, plaines et littoral, et abrite des industries de pointe, ainsi que le célèbre Mont Fuji.",
+        "Chugoku": "Située à l’ouest de Honshū, Chūgoku est une région contrastée entre zones industrielles (comme Hiroshima) et campagnes montagneuses, connue pour son patrimoine historique et ses paysages côtiers",
+        "Hokkaido": "La région la plus au nord du Japon, Hokkaidō est connue pour ses vastes espaces naturels, ses stations de ski, et sa production agricole.",
+        "Kanto": "Région autour de Tokyo, cœur économique et culturel du Japon, Kantō est la plus densément peuplée et un centre majeur de la technologie et des affaires.",
+        "Kansai": "Cette région historique est le berceau de nombreuses traditions japonaises, avec des villes emblématiques comme Kyoto, Osaka et Nara, et un riche patrimoine culturel.",
+        "Kyushu": "L'île méridionale du Japon, Kyushu est un centre d'industrialisation, avec une riche histoire culturelle et des sites naturels comme les volcans et les onsens.",
+        "Okinawa": "Un archipel subtropical au sud, Okinawa possède une culture unique, influencée par son histoire indépendante et son rôle stratégique dans la Seconde Guerre mondiale.",
+        "Shikoku": "La plus petite des îles principales du Japon, Shikoku est célèbre pour ses temples bouddhistes, son pèlerinage spirituel et ses paysages montagneux et côtiers.",
+        "Tohoku": "Située au nord de Honshu, Tohoku est une région montagneuse et agricole, réputée pour ses paysages naturels, son histoire, et ses festivals traditionnels."       
     };
+
+    
     // Dictionnaire des descriptions par ville
     const cityDescriptions = {
         "Nara":"",
@@ -88,9 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
             path.style.fill = "#b42b18"; // Couleur active après clic
             
             const description = regionDescriptions[regionName] || "Pas d'informations disponibles.";
-            const detailsLink = `<br><a href="details.html?region=${encodeURIComponent(regionName)}" target="_blank">Cliquez ici pour en savoir plus</a>`;
+            const detailsLink = `<br><a href="details.html?region=${encodeURIComponent(regionName)}" target="_blank">Cliquez ici pour en apprendre plus</a>`;
             infoBox.innerHTML = `<strong>${regionName}</strong><br>${description}${detailsLink}`;
-            infoBox.style.display = "block";
+            infoBox.style.display = "grid";
         });
 
         regionLinks.forEach(link => {
@@ -111,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const description = regionDescriptions[regionName] || "Pas d'informations disponibles.";
                     const detailsLink = `<br><a href="details.html?region=${encodeURIComponent(regionName)}" target="_blank">Cliquez ici pour en savoir plus</a>`;
                     infoBox.innerHTML = `<strong>${regionName}</strong><br>${description}${detailsLink}`;
-                    infoBox.style.display = "block";
+                    infoBox.style.display = "grid";
                 }
             });
         });
@@ -153,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
             activeRegion = null;
             const description = cityDescriptions[cityName] || "Pas d'informations disponibles.";
             infoBox.innerHTML = `<strong>${cityName}</strong><br>${description}`;
-            infoBox.style.display = "block";
+            infoBox.style.display = "grid";
         });
     });
 });
