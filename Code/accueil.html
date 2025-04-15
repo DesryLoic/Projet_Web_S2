@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nihon no Monogatari</title>
+    <link rel="stylesheet" href="cSS/css_site.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+    <header>
+        <div class="header-top">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h1>Nihon no Monogatari</h1>
+            <button class="login-btn">Se connecter</button>
+        </div>
+        <div class="nav-container">
+            <nav id="ma-barre-de-navigation">
+                <ul class="menu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#histoire">Histoire</a></li>
+                    <li><a href="#tourisme">Tourisme</a></li>
+                    <li><a href="#Kitsune">Kitsune</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="accueil">
+            <div class="overlay">
+                <h1>Bienvenue au Japon</h1>
+                <p>Explorez la richesse culturelle et naturelle du Japon.</p>
+            </div>
+            <img src="img/image1.jpg" alt="Image du Japon" class="image-japon">
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Nihon no Monogatari</p>
+    </footer>
+
+
+
+
+    <script>
+        window.onscroll = function() {
+            fixerBarreDeNavigation();
+        };
+    
+        var barreDeNavigation = document.getElementById("ma-barre-de-navigation");
+        var distanceDuHaut = barreDeNavigation.offsetTop;
+    
+        function fixerBarreDeNavigation() {
+            if (window.pageYOffset >= distanceDuHaut) {
+                barreDeNavigation.classList.add("fixe");
+            } else {
+                barreDeNavigation.classList.remove("fixe");
+            }
+        }
+    </script>
+    
+</body>
+</html>
