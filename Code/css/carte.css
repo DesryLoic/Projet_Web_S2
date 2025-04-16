@@ -133,9 +133,13 @@ body {
         text-align: center;
   }
   #fox {
-    width: 80px; /* Réduit la taille de l'image sur mobile */
+    width: 110px;
     height: auto;
+    bottom: 26%;
     grid-area: fox;
+    position: fixed;
+    left: 12%;
+    
   }
 
   #chat-bubble {
@@ -143,6 +147,9 @@ body {
     grid-area: text;
     display: block; /* Affiche la bulle de dialogue sur mobile */
     animation: fadeIn 0.5s; /* Animation d'apparition */
+    position: fixed;
+    top: 38%;
+    display: none;
     
   }
 
