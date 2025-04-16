@@ -1,93 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nihon no Monogatari</title>
-    <link rel="stylesheet" href="cSS/css_site.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="header-top">
-            <img src="images/logo.png" alt="Logo" class="logo">
-            <h1>Nihon no Monogatari</h1>
-            <button class="login-btn">Se connecter</button>
-        </div>
-        <div class="nav-container">
-            <nav id="ma-barre-de-navigation">
-                <ul class="menu">
-                    <li><a href="accueil.html">Accueil</a></li>
-                    <li><a href="#histoire">Histoire</a></li>
-                    <li><a href="tourisme.html">Tourisme</a></li>
-                    <li><a href="#Kitsune">Kitsune</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <!-- Premier carrousel -->
-        <div class="carousel-container" id="carousel1">
-            <button class="prev" onclick="prevSlide(0)">&#10094;</button>
-            <div class="carousel">
-                <img class="carousel-image" src="img/image1.jpg" alt="Image 1">
-                <img class="carousel-image" src="img/image2.jpg" alt="Image 2">
-                <img class="carousel-image" src="img/image3.jpg" alt="Image 3">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nihon no Monogatari</title>
+        <link rel="stylesheet" href="cSS/css_site.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="header-top">
+                <img src="images/logo.png" alt="Logo" class="logo">
+                <h1>Nihon no Monogatari</h1>
+                <button class="login-btn">Se connecter</button>
             </div>
-            <button class="next" onclick="nextSlide(0)">&#10095;</button>
-        </div>
-        <div class="dots-container" id="dots1">
-            <span class="dot" onclick="goToSlide(0, 0)"></span>
-            <span class="dot" onclick="goToSlide(1, 0)"></span>
-            <span class="dot" onclick="goToSlide(2, 0)"></span>
-        </div>
-
-        <!-- Zone de texte -->
-        <div class="text-container">
-            <p>Bienvenue dans notre galerie d'images ! Découvrez nos magnifiques paysages à travers ces carrousels.</p>
-        </div>
-
-        <!-- Deuxième carrousel -->
-        <div class="carousel-container" id="carousel2">
-            <button class="prev" onclick="prevSlide(1)">&#10094;</button>
-            <div class="carousel">
-                <img class="carousel-image" src="img/image4.jpg" alt="Image 4">
-                <img class="carousel-image" src="img/image5.jpg" alt="Image 5">
-                <img class="carousel-image" src="img/image6.jpg" alt="Image 6">
+            <div class="nav-container">
+                <nav id="ma-barre-de-navigation">
+                    <ul class="menu">
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="#histoire">Histoire</a></li>
+                        <li><a href="tourisme.html">Tourisme</a></li>
+                        <li><a href="#Kitsune">Kitsune</a></li>
+                    </ul>
+                </nav>
             </div>
-            <button class="next" onclick="nextSlide(1)">&#10095;</button>
-        </div>
-        <div class="dots-container" id="dots2">
-            <span class="dot" onclick="goToSlide(0, 1)"></span>
-            <span class="dot" onclick="goToSlide(1, 1)"></span>
-            <span class="dot" onclick="goToSlide(2, 1)"></span>
-        </div>
-    </main>
+        </header>
 
-    <footer>
-        <p>© 2024 Nihon no Monogatari</p>
-    </footer>
+        <main>
+            <!-- Premier carrousel -->
+            <div class="carousel-container" id="carousel1">
+                <button class="prev" onclick="prevSlide(0)">&#10094;</button>
+                <div class="carousel">
+                    <img class="carousel-image" src="img/image1.jpg" alt="Image 1">
+                    <img class="carousel-image" src="img/image2.jpg" alt="Image 2">
+                    <img class="carousel-image" src="img/image3.jpg" alt="Image 3">
+                </div>
+                <button class="next" onclick="nextSlide(0)">&#10095;</button>
+            </div>
+            <div class="dots-container" id="dots1">
+                <span class="dot" onclick="goToSlide(0, 0)"></span>
+                <span class="dot" onclick="goToSlide(1, 0)"></span>
+                <span class="dot" onclick="goToSlide(2, 0)"></span>
+            </div>
 
-    <script src="js/carrousel.js"></script>
+            <!-- Zone de texte -->
+            <div class="text-container">
+                <p>Bienvenue dans notre galerie d'images ! Découvrez nos magnifiques paysages à travers ces carrousels.</p>
+            </div>
+
+            <!-- Deuxième carrousel -->
+            <div class="carousel-container" id="carousel2">
+                <button class="prev" onclick="prevSlide(1)">&#10094;</button>
+                <div class="carousel">
+                    <img class="carousel-image" src="img/image4.jpg" alt="Image 4">
+                    <img class="carousel-image" src="img/image5.jpg" alt="Image 5">
+                    <img class="carousel-image" src="img/image6.jpg" alt="Image 6">
+                </div>
+                <button class="next" onclick="nextSlide(1)">&#10095;</button>
+            </div>
+            <div class="dots-container" id="dots2">
+                <span class="dot" onclick="goToSlide(0, 1)"></span>
+                <span class="dot" onclick="goToSlide(1, 1)"></span>
+                <span class="dot" onclick="goToSlide(2, 1)"></span>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 Nihon no Monogatari</p>
+        </footer>
+
+        <script src="js/carrousel.js"></script>
 
 
-    <script>
-        window.onscroll = function() {
-            fixerBarreDeNavigation();
-        };
-    
-        var barreDeNavigation = document.getElementById("ma-barre-de-navigation");
-        var distanceDuHaut = barreDeNavigation.offsetTop;
-    
-        function fixerBarreDeNavigation() {
-            if (window.pageYOffset >= distanceDuHaut) {
-                barreDeNavigation.classList.add("fixe");
-            } else {
-                barreDeNavigation.classList.remove("fixe");
+        <script>
+            window.onscroll = function() {
+                fixerBarreDeNavigation();
+            };
+        
+            var barreDeNavigation = document.getElementById("ma-barre-de-navigation");
+            var distanceDuHaut = barreDeNavigation.offsetTop;
+        
+            function fixerBarreDeNavigation() {
+                if (window.pageYOffset >= distanceDuHaut) {
+                    barreDeNavigation.classList.add("fixe");
+                } else {
+                    barreDeNavigation.classList.remove("fixe");
+                }
             }
-        }
-    </script>
-    
-</body>
+        </script>
+        
+    </body>
 </html>
