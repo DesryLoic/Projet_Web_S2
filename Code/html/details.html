@@ -10,7 +10,7 @@
 
     <div id="overlay">
         <h1 id="region-title">Région</h1>
-        <p id="region-description">Description ici...</p>
+        <div id="region-description"></div>
     </div>
 
     <script>
@@ -18,77 +18,99 @@
         const regionName = params.get("region");
         const regionData = {
             "Hokkaido": {
-                description: `
-                <h2>Géographie et divisions administratives</h2>
-                <p>Hokkaidō est la deuxième plus grande île du Japon et la plus septentrionale de l'archipel.
+                description: {
+                    "Géographie et divisions administratives": `Hokkaidō est la deuxième plus grande île du Japon et la plus septentrionale de l'archipel.
                     Elle constitue une préfecture unique et se trouve séparée de l'île principale de Honshū par le détroit de Tsugaru.
                     La région est connue pour ses vastes étendues naturelles, ses montagnes et ses côtes sauvages.
                     La capitale de Hokkaidō est Sapporo, la cinquième plus grande ville du Japon.
-                    L'île est divisée en plusieurs zones géographiques, notamment des plaines, des forêts, et des montagnes, et possède un climat froid et sec, particulièrement marqué par de longs hivers enneigés.</p>
-                <br>
-                <h2>Histoire et culture</h2>
-                <p>L'île de Hokkaidō a été habitée bien avant la période historique du Japon, d'abord par les Aïnous, un peuple indigène qui vivait dans la région avant l'arrivée des Japonais.
-                    Ce peuple a une culture distincte, avec une langue et des coutumes qui sont encore préservées dans certaines parties de l'île.
+                    L'île est divisée en plusieurs zones géographiques, notamment des plaines, des forêts, et des montagnes, et possède un climat froid et sec, particulièrement marqué par de longs hivers enneigés.`,
+
+                    "Histoire et culture": `L'île de Hokkaidō a été habitée bien avant la période historique du Japon, d'abord par les Aïnous, un peuple indigène qui vivait dans la région avant l'arrivée des Japonais. 
+                    Ce peuple a une culture distincte, avec une langue et des coutumes qui sont encore préservées dans certaines parties de l'île. 
                     La région a été annexée par le gouvernement japonais au XIXe siècle, et son développement a été largement influencé par des politiques de colonisation visant à exploiter ses ressources naturelles.
-                <br>
-                La culture d'Hokkaidō est marquée par l'héritage Aïnou et par des influences modernes.
-                L'île est aussi connue pour ses festivals, dont le célèbre Festival de la neige de Sapporo, qui attire chaque année des milliers de visiteurs internationaux.
-                Si vous voulez découvrir l'histoire et la culture de la région, le musée d'Hokkaidō à Sapporo et les villages traditionnels d'Aïnou sont faits pour vous !</p>
-                <br>
-                <h2>Nature et paysages</h2>
-                <p>Hokkaidō est réputée pour ses paysages naturels exceptionnels, qui varient entre montagnes, forêts, lacs et côtes.
-                    L'île est traversée par plusieurs chaînes montagneuses, dont la chaîne de Daisetsuzan, qui abrite des volcans actifs.
-                    Le Parc national de Shikotsu-To ya, avec son lac Shikotsu et ses sources thermales, est l'un des nombreux espaces protégés de la région.
-                <br>
-                Les montagnes et les parcs nationaux font d'Hokkaidō une destination prisée pour les activités de plein air, notamment la randonnée, le ski et le vélo.
-                L'hiver, la région devient un centre majeur pour les sports d'hiver, en particulier à Niseko, qui est mondialement connu pour ses stations de ski.
-                De plus, l'île est un refuge pour une faune riche, comprenant des ours bruns, des cerfs et une grande variété d'oiseaux.</p>
-                <br>
-                <h2>Économie et industries</h2>
-                <p>L'économie de Hokkaidō repose principalement sur l'agriculture, la pêche et le tourisme.
-                    L'île est le plus grand producteur de lait du Japon et elle est également renommée pour ses produits laitiers, en particulier le fromage, le beurre et le lait.
-                    Les céréales, les légumes, et les pommes de terre y sont aussi cultivés en abondance.
+                    <br>
+                    La culture d'Hokkaidō est marquée par l'héritage Aïnou et par des influences modernes. 
+                    L'île est aussi connue pour ses festivals, dont le célèbre Festival de la neige de Sapporo, qui attire chaque année des milliers de visiteurs internationaux. 
+                    Si vous voulez découvrir l'histoire et la culture de la région, le musée d'Hokkaidō à Sapporo et les villages traditionnels d'Aïnou sont faits pour vous !`,
+
+                    "Nature et paysages": `Hokkaidō est réputée pour ses paysages naturels exceptionnels, qui varient entre montagnes, forêts, lacs et côtes. 
+                    L'île est traversée par plusieurs chaînes montagneuses, dont la chaîne de Daisetsuzan, qui abrite des volcans actifs. 
+                    Le Parc national de Shikotsu-Tōya, avec son lac Shikotsu et ses sources thermales, est l'un des nombreux espaces protégés de la région.
+                    <br>
+                    Les montagnes et les parcs nationaux font d'Hokkaidō une destination prisée pour les activités de plein air, notamment la randonnée, le ski et le vélo. 
+                    L'hiver, la région devient un centre majeur pour les sports d'hiver, en particulier à Niseko, qui est mondialement connu pour ses stations de ski. 
+                    De plus, l'île est un refuge pour une faune riche, comprenant des ours bruns, des cerfs et une grande variété d'oiseaux.`,
+
+                    "Économie et industries": `L'économie de Hokkaidō repose principalement sur l'agriculture, la pêche et le tourisme. 
+                    L'île est le plus grand producteur de lait du Japon et elle est également renommée pour ses produits laitiers, en particulier le fromage, le beurre et le lait. Les céréales, les légumes, et les pommes de terre y sont aussi cultivés en abondance. 
                     La pêche, en particulier dans la mer d'Okhotsk, joue un rôle clé, avec une forte production de poissons, de fruits de mer et d'algues.
                     <br>
-                    Le secteur touristique représente une part importante de l'économie de Hokkaidō.
-                    Les stations de ski, les sources thermales naturelles (onsen), ainsi que les parcs nationaux attirent des millions de visiteurs chaque année.
-                    L'île est également un centre important pour l'industrie forestière et la production d'énergie, avec plusieurs centrales hydroélectriques.
-                <h2>Accès et transports</h2>
-                <p>Hokkaidō est accessible par voie aérienne, maritime et ferroviaire.
-                    L'aéroport de New Chitose, près de Sapporo, est le principal aéroport international de l'île, reliant Hokkaidō à d'autres régions du Japon et à des destinations internationales.
-                    La région est également bien desservie par des trains, notamment le Shinkansen qui relie la préfecture de Hokkaidō à Honshū via le tunnel Seikan, un des plus longs tunnels sous-marins du monde.
-                    Le réseau de transport interne de l'île inclut des trains locaux, des bus et des services de ferry, qui facilitent les déplacements entre les différentes zones.</p>
-                <br>`
+                    Le secteur touristique représente une part importante de l'économie de Hokkaidō. 
+                    Les stations de ski, les sources thermales naturelles (onsen), ainsi que les parcs nationaux attirent des millions de visiteurs chaque année. 
+                    L'île est également un centre important pour l'industrie forestière et la production d'énergie, avec plusieurs centrales hydroélectriques.`,
+
+                    "Accès et transports": `Hokkaidō est accessible par voie aérienne, maritime et ferroviaire. 
+                    L'aéroport de New Chitose, près de Sapporo, est le principal aéroport international de l'île, reliant Hokkaidō à d'autres régions du Japon et à des destinations internationales. 
+                    La région est également bien desservie par des trains, notamment le Shinkansen qui relie la préfecture de Hokkaidō à Honshū via le tunnel Seikan, un des plus longs tunnels sous-marins du monde. 
+                    Le réseau de transport interne de l'île inclut des trains locaux, des bus et des services de ferry, qui facilitent les déplacements entre les différentes zones.`
+                }
             },
             "Tohoku": {
-                description: "Tohoku est une région montagneuse, connue pour ses sources chaudes et ses festivals traditionnels."
+                description: {
+                    "Informations générales": "Tohoku est une région montagneuse, connue pour ses sources chaudes et ses festivals traditionnels."
+                }
             },
             "Kanto": {
-                description: "Kanto abrite Tokyo, la capitale du Japon, ainsi que Yokohama et d'autres grandes villes."
+                description: {
+                    "Informations générales": "Kanto abrite Tokyo, la capitale du Japon, ainsi que Yokohama et d'autres grandes villes."
+                }
             },
             "Chubu": {
-                description: "Chubu est une région variée, avec les Alpes japonaises et la ville historique de Nagoya."
+                description: {
+                    "Informations générales": "Chubu est une région variée, avec les Alpes japonaises et la ville historique de Nagoya."
+                }
             },
             "Kansai": {
-                description: "Kansai est le cœur culturel du Japon avec Kyoto, Osaka et Nara, riches en histoire."
+                description: {
+                    "Informations générales": "Kansai est le cœur culturel du Japon avec Kyoto, Osaka et Nara, riches en histoire."
+                }
             },
             "Chugoku": {
-                description: "Chugoku est connue pour Hiroshima et le sanctuaire de Miyajima."
+                description: {
+                    "Informations générales": "Chugoku est connue pour Hiroshima et le sanctuaire de Miyajima."
+                }
             },
             "Shikoku": {
-                description: "Shikoku est célèbre pour son pèlerinage des 88 temples et ses paysages côtiers."
+                description: {
+                    "Informations générales": "Shikoku est célèbre pour son pèlerinage des 88 temples et ses paysages côtiers."
+                }
             },
             "Kyushu": {
-                description: "Kyushu offre une nature luxuriante, des sources chaudes et la ville historique de Nagasaki."
+                description: {
+                    "Informations générales": "Kyushu offre une nature luxuriante, des sources chaudes et la ville historique de Nagasaki."
+                }
             },
             "Okinawa": {
-                description: "Okinawa est un paradis tropical avec des plages magnifiques et une culture unique."
+                description: {
+                    "Informations générales": "Okinawa est un paradis tropical avec des plages magnifiques et une culture unique."
+                }
             }
         };
 
         if (regionName && regionData[regionName]) {
             document.getElementById("region-title").textContent = regionName;
-            document.getElementById("region-description").innerHTML = regionData[regionName].description;
+            const container = document.getElementById("region-description");
+            container.innerHTML = "";
+
+            const sections = regionData[regionName].description;
+            for (const [titre, texte] of Object.entries(sections)) {
+                const h2 = document.createElement("h2");
+                h2.textContent = titre;
+                const p = document.createElement("p");
+                p.textContent = texte;
+                container.appendChild(h2);
+                container.appendChild(p);
+            }
 
             // Ajoute l'image de fond
             document.body.style.backgroundImage = `url('../img/img_regions/${regionName}_background.jpg')`;
