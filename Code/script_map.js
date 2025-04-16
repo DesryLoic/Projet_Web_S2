@@ -53,15 +53,20 @@ document.addEventListener("DOMContentLoaded", function () {
             const tooltip = document.createElement("div");
             tooltip.classList.add("tooltip");
             tooltip.innerText = regionName;
-            tooltip.style.position = "absolute";
+            tooltip.style.position = "fixed";
             tooltip.style.background = "white";
             tooltip.style.border = "1px solid black";
             tooltip.style.padding = "5px";
             tooltip.style.fontSize = "12px";
             const map = document.querySelector(".map__image"); // Sélectionne la carte
             const mapRect = map.getBoundingClientRect(); // Position de la carte
-            tooltip.style.left = `${mapRect.left + 10}px`; // Position à gauche de la carte
-            tooltip.style.top = `${mapRect.top + 10}px`; // Position en haut de la carte       
+            region.addEventListener("mousemove", (e) => {
+                const tooltip = document.getElementById("region-tooltip");
+                if (tooltip) {
+                    tooltip.style.left = `${e.clientX + 10}px`;
+                    tooltip.style.top = `${e.clientY + 10}px`;
+                }
+            });
             tooltip.id = "region-tooltip";
             document.body.appendChild(tooltip);
         });
@@ -120,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const tooltip = document.createElement("div");
             tooltip.classList.add("tooltip");
             tooltip.innerText = cityName;
-            tooltip.style.position = "absolute";
+            tooltip.style.position = "fixed";
             tooltip.style.background = "white";
             tooltip.style.border = "1px solid black";
             tooltip.style.padding = "5px";
@@ -128,9 +133,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const map = document.querySelector(".map__image"); // Sélectionne la carte
             const mapRect = map.getBoundingClientRect(); // Position de la carte
             const toriiRect = torii.getBoundingClientRect(); // Position du Torii
-
-            tooltip.style.left = `${mapRect.left + 10}px`; // Position à gauche de la carte
-            tooltip.style.top = `${mapRect.top + 10}px`; // Position en haut de la carte       
+            torii.addEventListener("mousemove", (e) => {
+                const tooltip = document.getElementById("city-tooltip");
+                if (tooltip) {
+                    tooltip.style.left = `${e.clientX + 10}px`;
+                    tooltip.style.top = `${e.clientY + 10}px`;
+                } 
+            });
             tooltip.id = "city-tooltip";
             document.body.appendChild(tooltip);
         });

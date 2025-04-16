@@ -1,11 +1,12 @@
-
 .map {
   display: flex;
-  flex-direction: column; /* Met les éléments en colonne */
-  align-items: center; /* Centre la carte et la liste */
+  flex-direction: row; /* Affiche la carte et la liste côte à côte */
+  justify-content: center; /* Centre horizontalement */
+  align-items: flex-start; /* Aligne en haut */
+  gap: 40px; /* Espace entre la carte et la liste */
 }
 .map__image{
-    float: left;
+    float: right;
     width: 50%;
 }
 .map__image path{
@@ -17,22 +18,23 @@
 .map__image path:hover{
     fill: #d4331e;
  }
-.map__list{
-    text-align: center; 
-    margin-bottom: 50px;
-    width: 100%;
+ .map__list {
+  order: -1; /* Met la liste avant la carte */
+  width: 30%;
+  text-align: left;
 }
 .map__list ul {
   list-style: none;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Permet le retour à la ligne si trop long */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Deux colonnes */
+  gap: 10px 20px; /* Espace entre lignes et colonnes */
 }
 
 .map__list li {
-  margin: 5px 15px; /* Espacement entre les noms */
+  font-size: 30px;
   font-weight: bold;
+  margin: 0;
 }
 
 .map__list a {
@@ -40,6 +42,7 @@
   padding: 5px 10px;
   border-radius: 5px;
   transition: all 0.3s;
+  display: inline-block;
 }
 
 /* Couleurs différentes pour chaque région */
