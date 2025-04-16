@@ -1,16 +1,22 @@
 body {
     font-family: 'Noto Serif JP', serif;
-    margin: 0;
-    padding: 0;
     background: linear-gradient(175deg, #f2dad2, #f2ccb2);
     color: #3e3e3e;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
 }
+
 header {
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
 }
+
 #ma-barre-de-navigation {
     position: absolute;
     width: 100%;
