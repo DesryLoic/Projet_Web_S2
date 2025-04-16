@@ -102,12 +102,13 @@
             const container = document.getElementById("region-description");
             container.innerHTML = "";
 
+            // Dynamiser les titres de paragraphes
             const sections = regionData[regionName].description;
             for (const [titre, texte] of Object.entries(sections)) {
                 const h2 = document.createElement("h2");
                 h2.textContent = titre;
                 const p = document.createElement("p");
-                p.textContent = texte;
+                p.innerHTML = texte; // Utilise innerHTML pour interpréter les balises HTML comme <br>
                 container.appendChild(h2);
                 container.appendChild(p);
             }
