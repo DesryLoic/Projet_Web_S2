@@ -1,3 +1,7 @@
+body {
+  background-color: #f6e5dc;
+}
+
 .map {
   display: flex;
   flex-direction: row; /* Affiche la carte et la liste côte à côte */
