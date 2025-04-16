@@ -1,3 +1,12 @@
+// Sélectionner le bouton menu et la barre de navigation
+const menuBtn = document.querySelector('.menu-btn');
+const navbar = document.querySelector('.navbar');
+
+// Ajouter un événement au clic sur le bouton hamburger pour afficher/masquer le menu
+document.querySelector('.menu-btn').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('show-menu');
+});
+
 let carousels = [
     { index: 0, slides: [], dots: [] },
     { index: 0, slides: [], dots: [] }
@@ -37,3 +46,4 @@ setInterval(() => nextSlide(0), 8000); // Défilement automatique du premier car
 setInterval(() => nextSlide(1), 8000); // Défilement automatique du deuxième carrousel toutes les 8 secondes
 
 initializeCarousels();
+

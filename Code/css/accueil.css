@@ -5,12 +5,10 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;    
-    /* background-color: #f4f4f4; Fond plus moderne */
     background: linear-gradient(175deg, #f2dad2, #f2ccb2); 
-    font-family: 'Poppins', sans-serif; /* Police plus moderne */
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Ajout d'un effet de texture subtile */
 body::before {
     content: "";
     position: fixed;
@@ -18,7 +16,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('texture.png') repeat; /* Optionnel : texture subtile */
+    background: url('texture.png') repeat; 
     opacity: 0.05;
     z-index: -1;
     margin: 0;
@@ -31,29 +29,26 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
-    background-color: #d8a8a0; /* Fond léger avec transparence */
+    background-color: #d8a8a0; 
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo */
 .logo-container {
     flex: 1;
 }
 
 .logo {
-    width: 60px; /* Taille ajustée pour un meilleur équilibre */
+    width: 60px;
     height: auto;
-    transition: transform 0.3s ease; /* Animation au survol */
+    transition: transform 0.3s ease;
 }
 
 .logo:hover {
-    transform: scale(1.1); /* Effet de zoom au survol */
+    transform: scale(1.1);
 }
 
-/* Nom du site */
 .site-name {
     position: absolute;
     left: 50%;
@@ -64,16 +59,14 @@ header {
     font-size: 2rem;
     color: #F3EEE3;
     margin: 0;
-    font-family: 'Roboto', sans-serif; /* Police moderne */
-    letter-spacing: 2px; /* Espacement légèrement plus grand */
+    font-family: 'Roboto', sans-serif; 
+    letter-spacing: 2px;
 }
 
-/* Container pour le bouton "Se connecter" */
 .login-container {
     flex-shrink: 0;
 }
 
-/* Bouton Se connecter */
 .login-btn {
     background-color: #51423f;
     color: #fff;
@@ -81,7 +74,7 @@ header {
     padding: 8px 10px;
     border-radius: 6px;
     transition: all 0.3s ease;  
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
 }
 
 .login-btn:hover {
@@ -89,11 +82,9 @@ header {
     border-color: #b78c78;
 }
 
-
-/* Barre de navigation modernisée */
+/* Navbar modernisée */
 .navbar {
-    background: rgba(255, 255, 255, 0.6); /* Fond semi-transparent */
-    background: linear-gradient(135deg, rgba(51, 51, 51, 0.9), rgba(102, 102, 102, 0.9)); /* Dégradé moderne */
+    background: linear-gradient(135deg, rgba(51, 51, 51, 0.9), rgba(102, 102, 102, 0.9)); 
     padding: 10px 0;
     position: sticky;
     top: 0;
@@ -101,10 +92,10 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin: 0;
 }
 
+/* Menu normal */
 .navbar ul {
     list-style-type: none;
     margin: 0;
@@ -128,7 +119,6 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Effet de survol des liens */
 .navbar ul li a:hover {
     color: #dc9a9a; 
     transform: scale(1.1);
@@ -150,33 +140,14 @@ header {
     transform: scaleX(1);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-    }
-    
-    .navbar ul li {
-        margin: 10px 0;
-    }
-}
-
-/* Effet verre dépoli pour les sections */
+/* Styles généraux pour les autres éléments */
 main, .text-container {
-    /* background: rgba(255, 255, 255, 0.6); Fond semi-transparent */
     padding: 20px;
-    backdrop-filter: blur(10px); /* Effet flou */
-    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); Ombre douce */
+    backdrop-filter: blur(10px); 
     flex: 1;
     padding: 40px 0;
 }
 
-/* Espacement entre header, carrousels et footer */
-main {
-    padding: 40px 0;
-}
-
-/* Carrousel */
 .carousel-container {
     position: relative;
     width: 60%;
@@ -194,7 +165,6 @@ html {
     scroll-behavior: smooth;
 }
 
-  
 .carousel-image {
     width: 100%;
     height: auto;
@@ -202,7 +172,6 @@ html {
     display: block;
     flex: 0 0 auto;
 }
-  
 
 .prev, .next {
     z-index: 10;
@@ -245,20 +214,120 @@ html {
     background-color: #5a5757;
 }
 
-/* Style de la zone de texte */
-.text-container {
+p{
     text-align: center;
-    margin: 20px auto;
-    width: 60%;
-    font-size: 18px;
-    color: #333;
+    color: #252525;
 }
 
-/* Pied de page */
 footer {
     background-color: #333;
     color: #F3EEE3;
     text-align: center;
     padding: 15px 0;
     margin-top: 40px;
+}
+
+.menu-btn {
+    display: none; /* Cacher le bouton hamburger par défaut */
+}
+
+@media (max-width: 768px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "menu title logo"
+            "menu title login"
+            "menu title login";
+        gap: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    /* Positionnement des éléments */
+    .menu-btn {
+        grid-area: menu;
+        justify-self: start;
+        align-self: center;
+    }
+    
+    .login-container {
+        grid-area: login;
+        justify-self: end;
+        align-self: center;
+    }
+    
+    .logo-container {
+        grid-area: logo;
+        justify-self: right;
+        padding-right: 8px;
+    }
+    
+    .site-name {
+        grid-area: title;
+        justify-self: center;
+        
+    }
+
+    .site-name h1 {
+        font-size: 1.5rem;
+    }
+
+    .navbar ul {
+        display: none; 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: #F3EEE3;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* Affichage du menu lorsque le bouton hamburger est cliqué */
+    .navbar.show-menu ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .carousel-container {
+        width: 90%;
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-container {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .login-btn {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        margin: 3px;
+    }
+
+    .prev, .next {
+        font-size: 18px;
+        width: 25px;
+        height: 25px;
+    }
 }
