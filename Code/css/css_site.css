@@ -51,10 +51,10 @@ header {
 }
 
 .login-btn {
-    background-color: #6a4f4b;
+    background-color: #51423f;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 8px 10px;
     cursor: pointer;
     font-size: 14px;
     border-radius: 5px;
@@ -62,7 +62,7 @@ header {
 }
 
 .login-btn:hover {
-    background-color: #4d3734;
+    background-color: #b78c78;
 }
 
 .nav-container {
