@@ -71,7 +71,7 @@
 #fox-chat {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: 1fr;
