@@ -69,23 +69,11 @@
             <p>© 2024 Nihon no Monogatari</p>
         </footer>
 
-        <script src="js/accueil_carrousel.js"></script>
         <script>
-            window.onscroll = function() {
-                fixerBarreDeNavigation();
-            };
-        
-            var barreDeNavigation = document.getElementById("ma-barre-de-navigation");
-            var distanceDuHaut = barreDeNavigation.offsetTop;
-        
-            function fixerBarreDeNavigation() {
-                if (window.pageYOffset >= distanceDuHaut) {
-                    barreDeNavigation.classList.add("fixe");
-                } else {
-                    barreDeNavigation.classList.remove("fixe");
-                }
-            }
+            
         </script>
+
+        <script src="js/accueil.js"></script>
         
     </body>
 </html>
