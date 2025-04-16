@@ -17,7 +17,7 @@ header {
     z-index: 1000;
 }
 
-#ma-barre-de-navigation {
+.navbar {
     position: absolute;
     width: 100%;
     top: 75px;
@@ -30,7 +30,7 @@ header {
     transition: top 0.3s ease;
 }
 
-#ma-barre-de-navigation.fixe {
+.navbar.fixe {
     position: fixed;
     top: 0;
 }
