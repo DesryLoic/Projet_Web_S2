@@ -28,20 +28,49 @@
     </header>
 
     <main>
-        <section id="accueil">
-            <div class="overlay">
-                <h1>Bienvenue au Japon</h1>
-                <p>Explorez la richesse culturelle et naturelle du Japon.</p>
+        <!-- Premier carrousel -->
+        <div class="carousel-container" id="carousel1">
+            <button class="prev" onclick="prevSlide(0)">&#10094;</button>
+            <div class="carousel">
+                <img class="carousel-image" src="img/image1.jpg" alt="Image 1">
+                <img class="carousel-image" src="img/image2.jpg" alt="Image 2">
+                <img class="carousel-image" src="img/image3.jpg" alt="Image 3">
             </div>
-            <img src="img/image1.jpg" alt="Image du Japon" class="image-japon">
-        </section>
+            <button class="next" onclick="nextSlide(0)">&#10095;</button>
+        </div>
+        <div class="dots-container" id="dots1">
+            <span class="dot" onclick="goToSlide(0, 0)"></span>
+            <span class="dot" onclick="goToSlide(1, 0)"></span>
+            <span class="dot" onclick="goToSlide(2, 0)"></span>
+        </div>
+
+        <!-- Zone de texte -->
+        <div class="text-container">
+            <p>Bienvenue dans notre galerie d'images ! Découvrez nos magnifiques paysages à travers ces carrousels.</p>
+        </div>
+
+        <!-- Deuxième carrousel -->
+        <div class="carousel-container" id="carousel2">
+            <button class="prev" onclick="prevSlide(1)">&#10094;</button>
+            <div class="carousel">
+                <img class="carousel-image" src="img/image4.jpg" alt="Image 4">
+                <img class="carousel-image" src="img/image5.jpg" alt="Image 5">
+                <img class="carousel-image" src="img/image6.jpg" alt="Image 6">
+            </div>
+            <button class="next" onclick="nextSlide(1)">&#10095;</button>
+        </div>
+        <div class="dots-container" id="dots2">
+            <span class="dot" onclick="goToSlide(0, 1)"></span>
+            <span class="dot" onclick="goToSlide(1, 1)"></span>
+            <span class="dot" onclick="goToSlide(2, 1)"></span>
+        </div>
     </main>
 
     <footer>
         <p>© 2024 Nihon no Monogatari</p>
     </footer>
 
-
+    <script src="js/carrousel.js"></script>
 
 
     <script>

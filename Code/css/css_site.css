@@ -133,26 +133,87 @@ main {
     margin-top: 100px;
 }
 
-#accueil {
-    text-align: center;
-    margin-top: 20px;
+/* Espacement entre header, carrousels et footer */
+main {
+    padding: 40px 0;
+}
+
+/* Carrousel */
+.carousel-container {
     position: relative;
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 40px;
 }
 
-.overlay {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-.image-japon {
+html {
+    scroll-behavior: smooth;
+}
+
+  
+.carousel-image {
     width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    opacity: 0.9;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    flex: 0 0 auto;
+}
+  
+
+.prev, .next {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #F3EEE3;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: gray;
+}
+
+/* Style de la zone de texte */
+.text-container {
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+    font-size: 18px;
+    color: #333;
 }
 
 /* --- FOOTER --- */
