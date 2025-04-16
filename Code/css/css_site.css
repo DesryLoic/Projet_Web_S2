@@ -152,7 +152,6 @@ html {
     scroll-behavior: smooth;
 }
 
-  
 .carousel-image {
     width: 100%;
     height: auto;
@@ -160,7 +159,6 @@ html {
     display: block;
     flex: 0 0 auto;
 }
-  
 
 .prev, .next {
     z-index: 10;
