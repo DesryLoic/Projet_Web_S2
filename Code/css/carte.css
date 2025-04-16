@@ -104,89 +104,46 @@ body {
   grid-area: chat;
 }
 
-.menu-btn {
-  display: none; /* Cacher le bouton hamburger par défaut */
-}
 
 
-/* Responsive*/
 @media (max-width: 768px) {
-  header {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto auto auto;
-      grid-template-areas: 
-          "menu title logo"
-          "menu title login"
-          "menu title login";
-      gap: 10px;
-      padding: 10px;
-      text-align: center;
-  }
-  
-  /* Positionnement des éléments */
-  .menu-btn {
-      grid-area: menu;
-      justify-self: start;
-      align-self: center;
-  }
-  
-  .login-container {
-      grid-area: login;
-      justify-self: end;
-      align-self: center;
-  }
-  
-  .logo-container {
-      grid-area: logo;
-      justify-self: right;
-      padding-right: 8px;
-  }
-  
-  .site-name {
-      grid-area: title;
-      justify-self: center;
-      
+  .map {
+    flex-direction: column; /* Affiche la carte et la liste en colonne */
+    align-items: center; /* Centre horizontalement */
   }
 
-  .site-name h1 {
-      font-size: 1.5rem;
+  .map__image {
+    width: 100%; /* Prend toute la largeur sur mobile */
+    order: 1; /* Met la carte après la liste */
+  }
+  .map__list {
+    width: 100%; /* Prend toute la largeur sur mobile */
+    text-align: center;
   }
 
-  .navbar ul {
-      display: none; 
-      flex-direction: column; 
-      align-items: center;
-      margin-top: 15px;
+  #fox-chat {
+    display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "fox"
+            "text";
+        gap: 10px;
+        padding: 10px;
+        text-align: center;
+  }
+  #fox {
+    width: 80px; /* Réduit la taille de l'image sur mobile */
+    height: auto;
+    grid-area: fox;
   }
 
-  .menu-btn {
-      display: block;
-      background: none;
-      border: none;
-      color: #F3EEE3;
-      font-size: 30px;
-      cursor: pointer;
+  #chat-bubble {
+    max-width: 38%; 
+    grid-area: text;
+    display: block; /* Affiche la bulle de dialogue sur mobile */
+    animation: fadeIn 0.5s; /* Animation d'apparition */
+    
   }
 
-  /* Affichage du menu lorsque le bouton hamburger est cliqué */
-  .navbar.show-menu ul {
-      display: flex;
-      flex-direction: row;
-  }
-
-  .text-container {
-      width: 90%;
-      font-size: 16px;
-      padding-left: 20px;
-  }
-
-  .login-btn {
-      padding: 6px 8px;
-      font-size: 14px;
-  }
-
-  footer {
-      padding: 10px 0;
-  }
 }
