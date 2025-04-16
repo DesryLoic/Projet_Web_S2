@@ -193,14 +193,14 @@ html {
     height: 10px;
     width: 10px;
     margin: 5px;
-    background-color: lightgray;
+    background-color: #b9b0b0;
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
 }
 
 .dot.active {
-    background-color: gray;
+    background-color: #5a5757;
 }
 
 /* Style de la zone de texte */
