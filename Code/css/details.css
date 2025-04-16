@@ -1,36 +1,81 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
+    padding: 0;
+    text-align: center;
     background-size: cover;
-    background-position: center;
-    background-position: top center; 
+    background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: #fff;
 }
+
+/* Effet flou et style du conteneur */
 #overlay {
-    background: rgba(0, 0, 0, 0.5); /* Assombrit l'image pour améliorer la lisibilité */
-    color: white;
-    padding: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-#region-title {
-    font-size: 36px;
-    font-weight: bold;
-}
-#region-description h2 {
-    font-size: 24px;
-    text-decoration: underline;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1s ease-out;
 }
 
+/* Titre principal */
+#region-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Titres de sections */
+#region-description h2 {
+    font-size: 26px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    color: #F3EEE3;
+    text-align: left;
+    width: 100%;
+}
+
+/* Paragraphes */
 #region-description p {
+    font-size: 18px;
     text-align: justify;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+/* Animation d'apparition douce */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive : mise à l’échelle sur petits écrans */
+@media screen and (max-width: 768px) {
+    #region-title {
+        font-size: 32px;
+    }
+
+    #region-description h2 {
+        font-size: 20px;
+    }
+
+    #region-description p {
+        font-size: 16px;
+    }
+
+    #overlay {
+        padding: 20px;
+    }
 }
