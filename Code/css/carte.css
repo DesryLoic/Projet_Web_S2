@@ -135,7 +135,7 @@ body {
   #fox {
     width: 110px;
     height: auto;
-    bottom: 26%;
+    bottom: 24%;
     grid-area: fox;
     position: fixed;
     left: 12%;
