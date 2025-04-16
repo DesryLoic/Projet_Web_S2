@@ -1,0 +1,337 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;    
+    /* background-color: #f4f4f4; Fond plus moderne */
+    background: linear-gradient(175deg, #f2dad2, #f2ccb2); 
+    font-family: 'Poppins', sans-serif; /* Police plus moderne */
+    
+}
+
+/* Ajout d'un effet de texture subtile */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('texture.png') repeat; /* Optionnel : texture subtile */
+    opacity: 0.05;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #d8a8a0; /* Fond léger avec transparence */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    z-index: 10;
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    width: 60px; /* Taille ajustée pour un meilleur équilibre */
+    height: auto;
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+/* Nom du site */
+.site-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.site-name h1 {
+    font-size: 2rem;
+    color: #F3EEE3;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Police moderne */
+    letter-spacing: 2px; /* Espacement légèrement plus grand */
+}
+
+/* Container pour le bouton "Se connecter" */
+.login-container {
+    flex-shrink: 0;
+}
+
+/* Bouton Se connecter */
+.login-button {
+    background-color: #51423f;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;  
+    font-family: 'Roboto', sans-serif; 
+}
+
+.login-button:hover {
+    background-color: #b78c78;
+    border-color: #b78c78;
+}
+
+
+/* Barre de navigation modernisée */
+.navbar {
+    background: rgba(255, 255, 255, 0.6); /* Fond semi-transparent */
+    background: linear-gradient(135deg, rgba(51, 51, 51, 0.9), rgba(102, 102, 102, 0.9)); /* Dégradé moderne */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #F3EEE3;
+    font-size: 18px;
+    padding: 10px 15px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Effet de survol des liens */
+.navbar ul li a:hover {
+    color: #dc9a9a; 
+    transform: scale(1.1);
+}
+
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #cd8c8c;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.navbar ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* Effet verre dépoli pour les sections */
+main, .text-container {
+    /* background: rgba(255, 255, 255, 0.6); Fond semi-transparent */
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Effet flou */
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); Ombre douce */
+    flex: 1;
+    padding: 40px 0;
+}
+
+/* Espacement entre header, carrousels et footer */
+main {
+    padding: 40px 0;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style de la zone de texte */
+.text-container {
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+    font-size: 18px;
+    color: #333;
+}
+
+/* --- MAIN --- */
+
+#fox-care-container {
+    margin-top: 20px;
+}
+
+#fox {
+    width: 200px;
+    height: auto;
+}
+
+#actions button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #e48f5599;
+    border-color: #e1a446;
+}
+
+#actions button:hover {
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+#status-message, #affection-level {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#affinity-container {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement si hauteur définie */
+    padding: 10px;
+}
+
+.heart {
+    width: 30px;
+    height: 30px;
+}
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+.heart-pop {
+    animation: pop 0.3s ease;
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: #F3EEE3;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+.menu-btn {
+    display: none; /* Cacher le bouton hamburger par défaut */
+}
+
+
+@media (max-width: 768px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "menu title logo"
+            "menu title login"
+            "menu title login";
+        gap: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    /* Positionnement des éléments */
+    .menu-btn {
+        grid-area: menu;
+        justify-self: start;
+        align-self: center;
+    }
+    
+    .login-container {
+        grid-area: login;
+        justify-self: end;
+        align-self: center;
+    }
+    
+    .logo-container {
+        grid-area: logo;
+        justify-self: right;
+        padding-right: 8px;
+    }
+    
+    .site-name {
+        grid-area: title;
+        justify-self: center;
+        
+    }
+
+    .site-name h1 {
+        font-size: 1.5rem;
+    }
+
+    .navbar ul {
+        display: none; 
+        flex-direction: column; 
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: #F3EEE3;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* Affichage du menu lorsque le bouton hamburger est cliqué */
+    .navbar.show-menu ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .text-container {
+        width: 90%;
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+    .login-btn {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    #status-message, #affection-level {
+        font-size: 18px;
+    }
+}

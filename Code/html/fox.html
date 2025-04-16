@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fox</title>
+        <link rel="stylesheet" href="../css/fox.css">
+    </head>
+    <header>
+        <div class="logo-container">
+            <img src="../img/torii.png" alt="Logo de Nihon no Monogatari" class="logo">
+        </div>
+        <button class="menu-btn" aria-label="Ouvrir le menu">&#9776;</button>
+        <div class="site-name">
+            <h1>Nihon no Monogatari</h1>
+        </div>
+        <div class="login-container">
+            <button class="login-button">Se connecter</button>
+        </div>
+    </header>
+    <body>
+        <!-- Barre de navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="../accueil.html">Accueil</a></li>
+                <li><a href="#">Histoire</a></li>
+                <li><a href="../tourisme.html">Tourisme</a></li>
+                <li><a href="fox.html">Renard</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Prends soin de ton petit renard </h1>
+            <div id="fox-care-container">
+                <img id="fox" src="fox.png" alt="Petit renard" />
+                <p id="status-message">Que veux-tu faire avec ton renard ?</p>
+                <p id="affection-level">Niveau d'affection : 0 </p>
+                <div id="affinity-container">
+                    <img src="../img/heart_empty.png" id="heart1" class="heart">
+                    <img src="../img/heart_empty.png" id="heart2" class="heart">
+                    <img src="../img/heart_empty.png" id="heart3" class="heart">
+                    <img src="../img/heart_empty.png" id="heart4" class="heart">
+                    <img src="../img/heart_empty.png" id="heart5" class="heart">
+                </div>
+                <br>                 
+
+                <div id="actions">
+                    <button onclick="feedFox()">Nourrir </button>
+                    <button onclick="petFox()">Caresser </button>
+                    <button onclick="playWithFox()">Jouer </button>
+                    <br>
+                    <button onclick="resetAffection()">Réinitialiser</button>
+                </div>
+            </div>
+            
+        </main>
+
+        <!-- Pied de page -->
+        <footer>
+            <p>&copy; 2025 Nihon no Monogatari. Tous droits réservés.</p>
+        </footer>
+
+        <script src="../js/fox.js"></script>
+    </body>
+</html>
