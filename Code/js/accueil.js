@@ -47,3 +47,28 @@ setInterval(() => nextSlide(1), 8000); // Défilement automatique du deuxième c
 
 initializeCarousels();
 
+window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".carousel-container").forEach(container => {
+        const carousel = container.querySelector(".carousel");
+        const images = carousel.querySelectorAll(".carousel-image");
+
+        // Stocker les images et les supprimer du DOM pour pouvoir les re-grouper
+        const imgArray = Array.from(images);
+        carousel.innerHTML = "";
+
+        imgArray.forEach(img => {
+            const wrapper = document.createElement("div");
+            wrapper.className = "carousel-item";
+
+            const fileName = img.alt || img.src.split('/').pop().split('.')[0];
+            const caption = document.createElement("span");
+            caption.className = "image-caption";
+            caption.textContent = fileName;
+
+            wrapper.appendChild(img);
+            wrapper.appendChild(caption);
+            carousel.appendChild(wrapper);
+        });
+    });
+});
+

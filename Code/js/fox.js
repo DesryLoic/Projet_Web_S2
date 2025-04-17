@@ -97,7 +97,7 @@ updateAffectionUI();
     }
 
     function resetAffection() {
-        fox.src = "fox.png";
+        fox.src = "../img/base.gif";
         affection = 0;
         saveAffection();
         updateAffectionUI();
