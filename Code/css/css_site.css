@@ -256,3 +256,35 @@ footer {
         padding: 10px 0;
     }
 }
+
+@media (max-width: 475px) {
+    .navbar ul li a {
+        font-size: 12px;
+        padding: 1px 1px;
+    }
+    
+    .site-name h1 {
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: 54px;
+        height: auto;
+    }
+
+    .login-btn {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .navbar.show-menu ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .navbar ul {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+}
