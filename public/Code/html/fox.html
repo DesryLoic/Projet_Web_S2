@@ -19,9 +19,19 @@
             <h1>Nihon no Monogatari</h1>
         </div>
         <div class="login-container">
-            <button onclick="location.href='../../account/account_passed.html'" class="login-button">Se connecter</button>
+            <button onclick="location.href='../../account/login.html'" class="login-button">Se connecter</button>
         </div>
     </header>
+    <script>
+        fetch('/me')
+          .then(response => response.json())
+          .then(data => {
+            if (!data.connected) {
+              // Redirige vers la page de connexion si non connecté
+              window.location.href = '/account/login.html';
+            }
+          });
+    </script>
     <body>
         <!-- Barre de navigation -->
         <nav class="navbar">

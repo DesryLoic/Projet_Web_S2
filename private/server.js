@@ -145,6 +145,15 @@ app.post('/login', (req, res) => {
     });
 });
 
+// ROUTE POUR VÉRIFIER LA SESSION
+app.get('/me', (req, res) => {
+    if (req.session.userId) {
+        res.json({ connected: true });
+    } else {
+        res.json({ connected: false });
+    }
+});
+
 // Page après login/register
 app.get('/account/account_passed.html', (req, res) => {
     if (!req.session.userId) return res.redirect('/');

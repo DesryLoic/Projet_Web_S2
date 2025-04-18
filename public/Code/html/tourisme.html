@@ -21,7 +21,7 @@
             <h1>Nihon no Monogatari</h1>
         </div>
         <div class="login-container">
-            <button onclick="location.href='../../account/account_passed.html'" class="login-btn">Se connecter</button>
+            <button onclick="location.href='../../account/login.html'" class="login-btn">Se connecter</button>
         </div>
     </header>
             <nav class="navbar">
@@ -32,7 +32,17 @@
                     <li><a href="fox.html">Kitsune</a></li>
                 </ul>
             </nav>
-
+    </header>
+    <script>
+        fetch('/me')
+          .then(response => response.json())
+          .then(data => {
+            if (!data.connected) {
+              // Redirige vers la page de connexion si non connecté
+              window.location.href = '/account/login.html';
+            }
+          });
+    </script>
     <body>
         <main>
             <div class="map"id="map">
