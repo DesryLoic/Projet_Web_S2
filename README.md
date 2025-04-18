@@ -2,6 +2,7 @@
 
 ## Description du projet :
 *Nihon no Monogatari* (Les histoires du Japon) est un site dédié à la culture, à l’histoire et aux paysages du Japon. Il permet d'explorer les différentes régions et villes japonaises tout en offrant une expérience interactive avec un petit kitsune (renard) virtuel dont l'utilisateur peut s'occuper.
+Le but est de faire découvrir la culture nippone au plus grand monde.
 
 
 ## Fonctionnalités principales : 
