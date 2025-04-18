@@ -7,13 +7,23 @@
 ## Fonctionnalités principales : 
 
 ### 1. Accueil
-Présentation générale du Japon avec une image en arrière-plan d'un paysage (mont Fuji/Tokyo etc)
-Onglets : Accueil, lieux touistiques, histoire.
-Carrousel d'images de paysages et monuments célèbres
+Présentation générale du site ainsi que deux carrousels d'images représentants différents paysages et monuments du Japon.
 
-### 3. Lieux touristiques (avec Carte interactive)
 ### 2. Frise chronologique présentant des événements 
-### 4. Kitsune : POissibilité de s'occuper d'un petit Kitsune
+Sur cette page, vous pourrez découvrir des événements clés de l'histoire du Japon en naviguant sur la frise à l'aide des boutons précédent et suivant.
+Des informations complémentaires sur ces événements seront alors affichés en-dessous de la frise.
+
+
+### 3. Carte interactive du Japon
+Les visiteurs peuvent découvrir les différentes régions du Japon, ainsi que plusieurs villes (représentées par des torii) en cliquant sur celles-ci.
+Le petit kitsune donnera alors des informations sur les villes et sur les régions. 
+Pour chaque région, si vous voulez en apprendre plus, vous pourrez cliquer sur le lien qui vous redirigera vers une page donnant plus amples informations sur celle-ci.
+
+
+### 4. Kitsune : Possibilité de s'occuper d'un petit Kitsune
+Ici, vous pourrez interagir avec un petit kitsune pour augmenter son niveau d'affinité.
+Vous pouvez le caresser, le nourrir ou jouer avec en appuyant sur les boutons correspondants.
+Si vous souhaitez réinitialiser votre niveau d'affinité, vous pouvez utiliser le bouton réinitialiser.
 
 
 ## Les instructions d’installation et d’exécution :
