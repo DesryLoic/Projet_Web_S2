@@ -91,8 +91,8 @@ updateAffectionUI();
     }
 
     function playWithFox() {
-        fox.src = "fox-jouer.png";
-        statusMessage.innerText = "Tu as lancé une balle à ton renard ! Il court après en remuant la queue.";
+        fox.src = "../img/kitsune/jeu.gif";
+        statusMessage.innerText = "Il joue avec un papillon ! Il a les yeux qui pétillent.";
         increaseAffection();
     }
 

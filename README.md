@@ -31,8 +31,23 @@ Vous pouvez naviguer sur chaque page à l'aide des dfférents onglets présents 
 
 
 ## Les instructions d’installation et d’exécution :
+- Installer Node.js et DBeaver (base de données)
+- Vérifier dans l'invite de commande que ceci est bien installé :
+    - npm init -y
+    - npm install express sqlite3 body-parser express-session
+- Ouvrir le terminal dans ton répertoire de projet et exécuter la commande suivante :
+    - node server.js
+- Ouvrir un navigateur et aller à l'adresse suivante :
+    - http://localhost:3000
+- Vous arrivez sur une page de connexion (non obligatoire pour naviguer sur le site)
+- Vous pouvez ensuite vous déplacer librement sur le site grâce aux différents onglets
 
-
+- Pour DBeaver, une fois l'installation finie :
+    - sélectionnner SQLite puis "Suivant"
+    - Cliquer sur "Open" et importer la base de données (database) présente dans le dossier private
+    - Cliquer ensuite sur "Terminer"
+    - Appuyer sur la flèche pour déplier database.db
+    - Déplier ensuite "Tables" pour accéder aux tables "accounts" et "users"
 
 ## Membres du groupe : 
 - Nathan ACHIN,
