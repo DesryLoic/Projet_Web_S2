@@ -1,3 +1,7 @@
+main {
+    justify-items: center;
+}
+
 .account-sections {
     display: flex;
     flex-direction: column;
@@ -6,16 +10,19 @@
 }
 
 .account-sections section {
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .account-sections h2 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
+    margin-bottom: 12px;
+    font-size: 1.8em;
+    font-family: 'Roboto', sans-serif;
     color: #333;
+    letter-spacing: 1px;
 }
 
 .account-sections ul {
@@ -24,14 +31,62 @@
 }
 
 .account-sections li {
-    margin: 5px 0;
+    margin: 8px 0;
+    font-size: 16px;
 }
 
 .account-sections a {
     text-decoration: none;
     color: #007BFF;
+    font-size: 16px;
 }
 
 .account-sections a:hover {
     text-decoration: underline;
+    color: #F62828;
+}
+
+.link {
+    text-decoration: none;
+    color: #c55e5e;
+    font-size: 18px;
+}
+
+
+/* Responsive styling for small screens (max-width: 738px) */
+@media screen and (max-width: 738px) {
+    .account-sections {
+        margin: 15px;
+    }
+
+    .account-sections section {
+        padding: 15px;
+    }
+
+    .account-sections h2 {
+        font-size: 1.5em;
+    }
+
+    .account-sections li {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:388px) {
+    .account-sections h2{
+        font-size: 20px;
+    }
+    .link {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 1em;
+    }
 }
