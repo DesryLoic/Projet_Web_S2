@@ -1,3 +1,4 @@
+
 // Exemple d'utilisation : appeler cette fonction avec l'ID utilisateur et le chemin de la page
 const userId = sessionStorage.getItem('userId'); // Assurez-vous que l'ID utilisateur est stocké
 if (!userId) {

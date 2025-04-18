@@ -8,7 +8,7 @@
     <meta name="description" content="Page de connexion">
     <link rel="icon" type="image/x-icon" href="../Code/img/torii.png">
     <link rel="stylesheet" href="../Code/css/css_site.css">
-    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="login.css">
     <title>Connexion</title>
 </head>
 <header>
@@ -43,10 +43,20 @@
             <br>
             <button type="submit">Se connecter</button>
         </form>
-        <p>Pas encore de compte ? <a class="link" href="/register">Créer un compte</a></p>
+        <p>Pas encore de compte ? <a class="link" href="register.html">Créer un compte</a></p>
     </main>
     <footer>
         <p>&copy; 2025 Nihon no Monogatari. Tous droits réservés.</p>
     </footer>
+    <script>
+        // Sélectionner le bouton menu et la barre de navigation
+        const menuBtn = document.querySelector('.menu-btn');
+        const navbar = document.querySelector('.navbar');
+
+        // Ajouter un événement au clic sur le bouton hamburger pour afficher/masquer le menu
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('show-menu');
+        });
+    </script>
 </body>
 </html>
