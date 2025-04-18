@@ -39,7 +39,7 @@ Vous pouvez naviguer sur chaque page à l'aide des dfférents onglets présents 
     - node server.js
 - Ouvrir un navigateur et aller à l'adresse suivante :
     - http://localhost:3000
-- Vous arrivez sur une page de connexion (non obligatoire pour naviguer sur le site)
+- Vous arrivez sur une page de connexion (obligatoire pour naviguer sur le site)
 - Vous pouvez ensuite vous déplacer librement sur le site grâce aux différents onglets
 
 - Pour DBeaver, une fois l'installation finie :
