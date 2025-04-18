@@ -19,7 +19,7 @@
             <h1>Nihon no Monogatari</h1>
         </div>
         <div class="login-container">
-            <button onclick="location.href='../../account/login.html'" class="login-button">Se connecter</button>
+            <button onclick="location.href='/account/account_passed.html'" class="login-button">Se connecter</button>
         </div>
     </header>
     <script>
@@ -73,7 +73,32 @@
         <footer>
             <p>&copy; 2025 Nihon no Monogatari. Tous droits réservés.</p>
         </footer>
-
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const loginBtn = document.querySelector(".login-btn"); // Assurez-vous que le bouton a la bonne classe
+        
+                // Vérifier l'état de connexion dès que la page est chargée
+                fetch('/me') // Appel à la route '/me' pour vérifier si l'utilisateur est connecté
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.connected && loginBtn) {
+                            loginBtn.addEventListener("click", function(event) {
+                                // Si l'utilisateur est déjà connecté, rediriger vers la page de son compte
+                                event.preventDefault();
+                                window.location.href = '/account/account_passed.html';
+                            });
+                        } else if (loginBtn) {
+                            loginBtn.addEventListener("click", function(event) {
+                                // Si l'utilisateur n'est pas connecté, rediriger vers la page de connexion
+                                event.preventDefault();
+                                window.location.href = '/login.html';
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Erreur lors de la vérification de la connexion:', err));
+            });
+        </script>
+        
         <script src="../js/fox.js"></script>
     </body>
 </html>

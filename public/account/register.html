@@ -44,7 +44,7 @@
                 <br>
                 <button type="submit">Créer le compte</button>
             </form>
-            <p>Déjà inscrit ? <a class="link" href="login.html">Se connecter</a></p>
+            <p>Déjà inscrit ? <a class="link" href="/account/login.html">Se connecter</a></p>
 
             <script>
                 const existingEmails = ["test@example.com", "user@example.com"]; // Replace with server-side validation in production
@@ -71,7 +71,32 @@
                 document.querySelector('.menu-btn').addEventListener('click', function() {
                     document.querySelector('.navbar').classList.toggle('show-menu');
                 });
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    const loginBtn = document.querySelector(".login-btn"); // Assurez-vous que le bouton a la bonne classe
+            
+                    // Vérifier l'état de connexion dès que la page est chargée
+                    fetch('/me') // Appel à la route '/me' pour vérifier si l'utilisateur est connecté
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.connected && loginBtn) {
+                                loginBtn.addEventListener("click", function(event) {
+                                    // Si l'utilisateur est déjà connecté, rediriger vers la page de son compte
+                                    event.preventDefault();
+                                    window.location.href = '/account/account_passed.html';
+                                });
+                            } else if (loginBtn) {
+                                loginBtn.addEventListener("click", function(event) {
+                                    // Si l'utilisateur n'est pas connecté, rediriger vers la page de connexion
+                                    event.preventDefault();
+                                    window.location.href = '/login.html';
+                                });
+                            }
+                        })
+                        .catch(err => console.error('Erreur lors de la vérification de la connexion:', err));
+                });
             </script>
+            
         </main>
         <footer>
             <p>&copy; 2025 Nihon no Monogatari. Tous droits réservés.</p>

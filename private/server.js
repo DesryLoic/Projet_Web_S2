@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const session = require('express-session');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
-const session = require('express-session');
+
 
 const app = express();
 const port = 3000;
@@ -16,6 +17,15 @@ app.use(
         saveUninitialized: true,
     })
 );
+
+// Route pour vérifier si l'utilisateur est connecté
+app.get('/me', (req, res) => {
+    if (req.session.userId) {
+        res.json({ connected: true });
+    } else {
+        res.json({ connected: false });
+    }
+});
 
 // Middleware pour sauvegarder les pages visitées (pages HTML, routes principales sans extension, et /Code/html/*, AVEC paramètres)
 app.use((req, res, next) => {
@@ -145,14 +155,7 @@ app.post('/login', (req, res) => {
     });
 });
 
-// ROUTE POUR VÉRIFIER LA SESSION
-app.get('/me', (req, res) => {
-    if (req.session.userId) {
-        res.json({ connected: true });
-    } else {
-        res.json({ connected: false });
-    }
-});
+
 
 // Page après login/register
 app.get('/account/account_passed.html', (req, res) => {
@@ -182,6 +185,8 @@ app.get('/logout', (req, res) => {
         res.redirect('/');
     });
 });
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Start server
 app.listen(port, () => {

@@ -11,6 +11,18 @@
         <link rel="icon" type="image/x-icon" href="../img/torii.png">
         <title>Frise Chronologique Interactive</title>
     </head>
+    <header>
+        <div class="logo-container">
+            <img src="../img/torii.png" alt="Logo de Nihon no Monogatari" class="logo">
+        </div>
+        <button class="menu-btn" aria-label="Ouvrir le menu">&#9776;</button>
+        <div class="site-name">
+            <h1>Nihon no Monogatari</h1>
+        </div>
+        <div class="login-container">
+            <button onclick="location.href='/account/account_passed.html'" class="login-btn">Se connecter</button>
+        </div>
+    </header>
     <script>
         fetch('/me')
         .then(response => response.json())
@@ -22,19 +34,6 @@
         });
     </script>
     <body>
-        <header>
-            <div class="logo-container">
-                <img src="../img/torii.png" alt="Logo de Nihon no Monogatari" class="logo">
-            </div>
-            <button class="menu-btn" aria-label="Ouvrir le menu">&#9776;</button>
-            <div class="site-name">
-                <h1>Nihon no Monogatari</h1>
-            </div>
-            <div class="login-container">
-                <button onclick="location.href='../../account/login.html'" class="login-btn">Se connecter</button>
-            </div>
-        </header>
-
         <nav class="navbar">
             <ul>
                 <li><a href="../accueil.html">Accueil</a></li>
@@ -74,7 +73,32 @@
         <footer>
             <p>&copy; 2025 Nihon no Monogatari. Tous droits réservés.</p>
         </footer>
-
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const loginBtn = document.querySelector(".login-btn"); // Assurez-vous que le bouton a la bonne classe
+        
+                // Vérifier l'état de connexion dès que la page est chargée
+                fetch('/me') // Appel à la route '/me' pour vérifier si l'utilisateur est connecté
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.connected && loginBtn) {
+                            loginBtn.addEventListener("click", function(event) {
+                                // Si l'utilisateur est déjà connecté, rediriger vers la page de son compte
+                                event.preventDefault();
+                                window.location.href = '/account/account_passed.html';
+                            });
+                        } else if (loginBtn) {
+                            loginBtn.addEventListener("click", function(event) {
+                                // Si l'utilisateur n'est pas connecté, rediriger vers la page de connexion
+                                event.preventDefault();
+                                window.location.href = '/login.html';
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Erreur lors de la vérification de la connexion:', err));
+            });
+        </script>
+        
         <script src="../js/frise.js"></script>
     </body>
 </html>
