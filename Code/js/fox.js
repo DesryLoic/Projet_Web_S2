@@ -85,7 +85,7 @@ updateAffectionUI();
     }
 
     function petFox() {
-        fox.src = "fox-caresse.png";
+        fox.src = "../img/kitsune/chouchou.gif";
         statusMessage.innerText = "Tu as caressé ton renard. Il ferme les yeux de bonheur !";
         increaseAffection();
     }
