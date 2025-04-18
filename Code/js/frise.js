@@ -1,3 +1,12 @@
+// Sélectionner le bouton menu et la barre de navigation
+const menuBtn = document.querySelector('.menu-btn');
+const navbar = document.querySelector('.navbar');
+
+// Ajouter un événement au clic sur le bouton hamburger pour afficher/masquer le menu
+document.querySelector('.menu-btn').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('show-menu');
+});
+
 const events = [
     {
         date: "12000 ou 11000 av. J.-C.",
