@@ -104,7 +104,7 @@ body {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .map {
     flex-direction: column; /* Affiche la carte et la liste en colonne */
     align-items: center; /* Centre horizontalement */
@@ -131,12 +131,12 @@ body {
     text-align: center;
   }
   #fox {
-    width: 233px;
+    width: 245px;
     height: auto;
-    bottom: 14%;
+    bottom: 25%;
     grid-area: fox;
     position: fixed;
-    right: 53%;
+    right: 62%;
   }
 
   #chat-bubble {
@@ -148,6 +148,58 @@ body {
     top: 38%;
     display: none;
     
+  }
+
+}
+
+@media (max-width: 548px) {
+  .map {
+    flex-direction: column; /* Affiche la carte et la liste en colonne */
+    align-items: center; /* Centre horizontalement */
+  }
+
+  .map__image {
+    width: 100%; /* Prend toute la largeur sur mobile */
+    order: 1; /* Met la carte après la liste */
+  }
+  .map__list {
+    width: 100%; /* Prend toute la largeur sur mobile */
+    text-align: center;
+  }
+  .map__list li {
+    font-size: 25px;
+  }
+
+
+  #fox-chat {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "fox text";
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+    justify-items: end;
+  }
+  #fox {
+    width: 228px;
+    height: auto;
+    bottom: 5%;
+    grid-area: fox;
+    position: fixed;
+    right: 50%;
+  }
+
+  #chat-bubble {
+    max-width: 50%; 
+    grid-area: text;
+    display: block; /* Affiche la bulle de dialogue sur mobile */
+    animation: fadeIn 0.5s; /* Animation d'apparition */
+    position: fixed;
+    top: 77%;
+    display: none;
+    font-size: 13px;
   }
 
 }
