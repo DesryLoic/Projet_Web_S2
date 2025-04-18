@@ -97,7 +97,8 @@ main {
 .event {
     position: relative;
     min-width: 180px;
-    max-width: 250px;
+    max-width: 220px;
+    min-height: 78px;
     padding: 20px;
     margin: 20px 0;
     background: linear-gradient(135deg, #FFADAD, #FFD6A5);
@@ -183,24 +184,26 @@ main {
 /* Pour les écrans de 700px et moins */
 @media (max-width: 700px) {
     .timeline-container {
-        padding: 20px 10px; /* Réduire les espacements */
-        margin: 20px auto; /* Réduire la marge */
+        padding: 10px; /* Réduire encore plus les espacements */
+        margin: 15px auto; /* Réduire la marge */
     }
 
     .timeline {
-        padding: 0 30px; /* Réduire le padding */
-        gap: 20px; /* Réduire l'espace entre les événements */
-    }
-
-    .event {
-        min-width: 150px; /* Ajuster la largeur minimale des événements */
-        max-width: 200px; /* Ajuster la largeur maximale des événements */
-        padding: 15px; /* Réduire les espacements internes des événements */
+        padding: 0 20px; /* Réduire le padding */
+        gap: 28px; /* Réduire l'espace entre les événements */
     }
 
     .controls button {
         padding: 10px 14px; /* Réduire la taille des boutons */
         font-size: 14px; /* Réduire la taille de la police */
+    }
+
+    .event {
+        min-width: 100px; /* Réduire encore la largeur minimale */
+        min-height: 50px;
+        max-width: none;
+        padding: 8px 12px; /* Réduire davantage les espacements internes */
+        font-size: 10px; /* Réduire la taille du texte */
     }
 
     .event-display {
@@ -224,6 +227,13 @@ main {
         width: 13px;
         height: 13px;
     }
+
+    .event strong {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 12px;
+        font-weight: bold;
+    }
 }
 
 /* Pour les écrans de 548px et moins */
@@ -235,18 +245,20 @@ main {
 
     .timeline {
         padding: 0 20px; /* Réduire le padding */
-        gap: 10px; /* Réduire l'espace entre les événements */
-    }
-
-    .event {
-        min-width: 120px; /* Ajuster la largeur minimale des événements */
-        max-width: 180px; /* Ajuster la largeur maximale des événements */
-        padding: 12px; /* Réduire les espacements internes des événements */
+        gap: 45px; /* Réduire l'espace entre les événements */
     }
 
     .controls button {
         padding: 8px 12px; /* Réduire la taille des boutons */
         font-size: 12px; /* Réduire la taille de la police */
+    }
+
+    .event {
+        min-width: 100px; /* Réduire encore la largeur minimale */
+        min-height: 50px;
+        max-width: none;
+        padding: 8px 12px; /* Réduire davantage les espacements internes */
+        font-size: 10px; /* Réduire la taille du texte */
     }
 
     .event-display {
