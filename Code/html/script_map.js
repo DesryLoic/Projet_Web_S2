@@ -32,23 +32,23 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Dictionnaire des descriptions par ville
     const cityDescriptions = {
-        "Nara":"",
-        "Osaka":"Osaka est connue pour sa cuisine de rue, son château et son ambiance dynamique.",
-        "Hiroshima":"Hiroshima est une ville symbole de paix avec le Mémorial de la Paix et l'île de Miyajima à proximité.",
-        "Nagasaki":"",
-        "Tokyo":"Tokyo est la capitale du Japon, un centre économique et culturel majeur avec une vie urbaine trépidante.",
-        "Kyoto":"Kyoto est célèbre pour ses temples, ses jardins et son héritage culturel préservé.",
-        "Sapporo":"",
-        "Kobe":"",
-        "Fukuoka":"Fukuoka est une ville portuaire dynamique avec une scène culinaire réputée et de nombreux festivals.",
-        "Fukushima":"",
-        "Kumamoto":"",
-        "Yokohama":"",
-        "Kawasaki":"",
-        "Nagano":"",
-        "Kanazawa":"",
-        "Hakodate":"",
-        "Asahikawa":""
+        "Nara":"Ancienne capitale impériale, Nara charme par ses temples millénaires, ses grands bouddhas et ses célèbres cerfs en liberté dans le parc de Nara. C’est un lieu paisible chargé d’histoire",
+        "Osaka":"Vibrante et conviviale, Osaka séduit par sa gastronomie de rue, son château emblématique et ses quartiers animés comme Dotonbori. Elle est également l'hôte de l'exposition universelle de 2025",
+        "Hiroshima":"Connue pour sa résilience, Hiroshima allie mémoire et espoir avec le Parc du Mémorial de la Paix, tout en offrant une culture vivante.",
+        "Nagasaki":"Ville portuaire au riche passé cosmopolite, Nagasaki fascine par son histoire ouverte sur le monde, ses églises chrétiennes, son parc de la paix et ses paysages volcaniques.",
+        "Tokyo":"Capitale dynamique et tentaculaire, Tokyo mêle gratte-ciels futuristes, temples anciens, culture pop et quartiers contrastés, de Shibuya à Asakusa. C’est une immersion totale dans le Japon contemporain.",
+        "Kyoto":"Ancienne capitale impériale, Kyoto est le cœur spirituel du Japon avec ses milliers de temples, ses jardins zen, ses geishas et ses ruelles préservées du vieux Japon.",
+        "Sapporo":"Capitale d’Hokkaidō, Sapporo est réputée pour son festival de neige, sa bière, sa cuisine régionale et ses vastes espaces naturels accessibles en toute saison.",
+        "Kobe":"Élégante et ouverte sur la mer, Kobe est célèbre pour son bœuf de renommée mondiale, son architecture mêlant styles occidentaux et japonais, et sa douceur de vivre en bord de montagne.",
+        "Fukuoka":"Porte d’entrée vers l’Asie continentale, Fukuoka combine plages urbaines, street food savoureuse (notamment les yatai) et une ambiance détendue et accueillante.",
+        "Fukushima":"Au-delà de la catastrophe de 2011, Fukushima offre des sources chaudes réputées, des paysages bucoliques, des traditions vivaces et une volonté de renouveau.",
+        "Kumamoto":"Dominée par son impressionnant château, Kumamoto est une ville d’histoire et de nature, proche du spectaculaire mont Aso, l’un des plus grands volcans actifs du Japon.",
+        "Yokohama":"Ville portuaire moderne aux portes de Tokyo, Yokohama allie front de mer élégant, quartiers internationaux, musées originaux et l’un des plus grands Chinatown du pays.",
+        "Kawasaki":"Entre Tokyo et Yokohama, Kawasaki est dynamique, industrielle et culturelle, avec des temples surprenants, des festivals exubérants et une scène artistique en plein essor.",
+        "Nagano":"Entourée de montagnes, Nagano attire pour son temple Zenko-ji, ses sports d’hiver et sa proximité avec les singes des neiges des sources chaudes de Jigokudani.",
+        "Kanazawa":"Entourée de montagnes, Nagano attire pour son temple Zenko-ji, ses sports d’hiver et sa proximité avec les singes des neiges des sources chaudes de Jigokudani.",
+        "Hakodate":"Ville portuaire du sud d’Hokkaidō, Hakodate charme avec sa colline panoramique, ses bâtiments occidentalisés et son marché aux fruits de mer très réputé.",
+        "Asahikawa":"Située au centre d’Hokkaidō, Asahikawa est appréciée pour son zoo renommé, sa proximité avec les montagnes Daisetsuzan et son excellent ramen local."
     };
     
     regions.forEach(region => {
