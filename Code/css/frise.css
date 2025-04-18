@@ -94,8 +94,6 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .event {
     position: relative;
     min-width: 180px;
@@ -179,4 +177,97 @@ main {
     width: 100%;
     border-radius: 8px;
     margin-top: 10px;
+}
+
+
+/* Pour les écrans de 700px et moins */
+@media (max-width: 700px) {
+    .timeline-container {
+        padding: 20px 10px; /* Réduire les espacements */
+        margin: 20px auto; /* Réduire la marge */
+    }
+
+    .timeline {
+        padding: 0 30px; /* Réduire le padding */
+        gap: 20px; /* Réduire l'espace entre les événements */
+    }
+
+    .event {
+        min-width: 150px; /* Ajuster la largeur minimale des événements */
+        max-width: 200px; /* Ajuster la largeur maximale des événements */
+        padding: 15px; /* Réduire les espacements internes des événements */
+    }
+
+    .controls button {
+        padding: 10px 14px; /* Réduire la taille des boutons */
+        font-size: 14px; /* Réduire la taille de la police */
+    }
+
+    .event-display {
+        width: 85%; /* Réduire la largeur de l'affichage des événements */
+        padding: 15px; /* Réduire les espacements internes */
+    }
+
+    #event-title {
+        font-size: 20px; /* Réduire la taille du titre de l'événement */
+    }
+
+    #event-description {
+        font-size: 16px; /* Réduire la taille de la description */
+    }
+
+    #event-info {
+        font-size: 14px; /* Réduire la taille du texte supplémentaire */
+    }
+    .dot {
+        bottom: -8px;
+        width: 13px;
+        height: 13px;
+    }
+}
+
+/* Pour les écrans de 548px et moins */
+@media (max-width: 548px) {
+    .timeline-container {
+        padding: 10px; /* Réduire encore plus les espacements */
+        margin: 15px auto; /* Réduire la marge */
+    }
+
+    .timeline {
+        padding: 0 20px; /* Réduire le padding */
+        gap: 10px; /* Réduire l'espace entre les événements */
+    }
+
+    .event {
+        min-width: 120px; /* Ajuster la largeur minimale des événements */
+        max-width: 180px; /* Ajuster la largeur maximale des événements */
+        padding: 12px; /* Réduire les espacements internes des événements */
+    }
+
+    .controls button {
+        padding: 8px 12px; /* Réduire la taille des boutons */
+        font-size: 12px; /* Réduire la taille de la police */
+    }
+
+    .event-display {
+        width: 80%;
+        padding: 10px; /* Réduire les espacements internes */
+    }
+
+    #event-title {
+        font-size: 18px; /* Réduire la taille du titre de l'événement */
+    }
+
+    #event-description {
+        font-size: 14px; /* Réduire la taille de la description */
+    }
+
+    #event-info {
+        font-size: 12px; /* Réduire la taille du texte supplémentaire */
+    }
+    .dot {
+        bottom: -7px;
+        width: 12px;
+        height: 12px;
+    }
 }
