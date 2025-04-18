@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue</title>
+</head>
+<body>
+    <h1>Bienvenue sur ton compte !</h1>
+    <a href="/logout">Déconnexion</a>
+
+    <div class="account-sections">
+        <!-- Section for Pages Visitées -->
+        <section id="pages-visitees">
+            <h2>Pages Visitées</h2>
+            <ul id="visited-list">
+                <!-- Les pages visitées seront insérées ici dynamiquement -->
+            </ul>
+        </section>
+
+        <!-- Section for Favoris -->
+        <section id="favoris">
+            <h2>Favoris</h2>
+            <ul>
+                <!-- Example items, replace with dynamic content if needed -->
+                <li><a href="#">Favori 1</a></li>
+                <li><a href="#">Favori 2</a></li>
+                <li><a href="#">Favori 3</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Bouton de redirection vers la page d'accueil -->
+    <a href="../Code/accueil.html" class="btn">Retour à l'accueil</a>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('/account/visited')
+            .then(res => res.json())
+            .then(data => {
+                const ul = document.getElementById('visited-list');
+                ul.innerHTML = '';
+                if (data.visitedPages && data.visitedPages.length) {
+                    data.visitedPages.slice().reverse().forEach(page => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<a href="${page}">${page}</a>`;
+                        ul.appendChild(li);
+                    });
+                } else {
+                    ul.innerHTML = '<li>Aucune page visitée récemment.</li>';
+                }
+            });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="japon, voyage, tourisme, histoire, kitsune">      <!-- Mots-clés référencement-->
+        <meta name="author" content="leo, audrey">
+        <meta name="description" content="Page d'accueil">        
+        <link rel="stylesheet" href="css/accueil.css">
+        <link rel="icon" type="image/x-icon" href="img/torii.png">
+        <title>Accueil</title>
+    </head>
+    <header>
+        <div class="logo-container">
+            <img src="img/torii.png" alt="Logo de Nihon no Monogatari" class="logo">
+        </div>
+        <button class="menu-btn" aria-label="Ouvrir le menu">&#9776;</button>
+        <div class="site-name">
+            <h1>Nihon no Monogatari</h1>
+        </div>
+        <div class="login-container">
+            <button onclick="location.href='../account/account_passed.html'" class="login-btn">Se connecter</button>
+        </div>
+        
+    </header>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="html/frise.html">Histoire</a></li>
+                <li><a href="html/tourisme.html">Tourisme</a></li>
+                <li><a href="html/fox.html">Kitsune</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Premier carrousel -->
+            <div class="carousel-container" id="carousel1">
+                <button class="prev" onclick="prevSlide(0)">&#10094;</button>
+                <div class="carousel">
+                    <img class="carousel-image" src="img/Itsukushima-jinja de Miyajima.jpg" alt="Torii flottante de Miyajima">
+                    <img class="carousel-image" src="img/Kamikochi.jpg" alt="Kamikochi">
+                    <img class="carousel-image" src="img/Mont Fuji.png" alt="Mont Fuji">
+                    <img class="carousel-image" src="img/Noboribetsu Jigokudani Valley.png" alt="Vallée de l'enfer de Noboribetsu">
+                </div>
+                <button class="next" onclick="nextSlide(0)">&#10095;</button>
+            </div>
+            <div class="dots-container" id="dots1">
+                <span class="dot" onclick="goToSlide(0, 0)"></span>
+                <span class="dot" onclick="goToSlide(1, 0)"></span>
+                <span class="dot" onclick="goToSlide(2, 0)"></span>
+                <span class="dot" onclick="goToSlide(3, 0)"></span>
+            </div>
+
+            <!-- Zone de texte -->
+            <div class="text-container">
+                <img src="img/kitsune/base.gif" id="fox" alt="Renard mignon">
+                <div class="texte">
+                    <p>Bienvenue sur Nihon no Monogatari !<br>
+                    Si tu veux découvrir l'histoire du Japon et ses magnifiques paysages, tu es au bon endroit !</p>
+                </div>
+            </div>
+
+            <!-- Deuxième carrousel -->
+            <div class="carousel-container" id="carousel2">
+                <button class="prev" onclick="prevSlide(1)">&#10094;</button>
+                <div class="carousel">
+                    <img class="carousel-image" src="img/Fushimi Inari-Taisha.jpg" alt="Sanctuaire de la déesse Inari">
+                    <img class="carousel-image" src="img/Château d'Himeji.jpg" alt="Château d'Himeji à Osaka">
+                    <img class="carousel-image" src="img/Arashiyama.jpg" alt="Forêt de bambous d'Arashiyama">
+                    <img class="carousel-image" src="img/Temple Senso-Ji.jpg" alt="Temple de Senso-Ji à Tokyo">
+                </div>
+                <button class="next" onclick="nextSlide(1)">&#10095;</button>
+            </div>
+            <div class="dots-container" id="dots2">
+                <span class="dot" onclick="goToSlide(0, 1)"></span>
+                <span class="dot" onclick="goToSlide(1, 1)"></span>
+                <span class="dot" onclick="goToSlide(2, 1)"></span>
+                <span class="dot" onclick="goToSlide(3, 1)"></span>
+            </div>
+        </main>
+
+        <!-- Pied de page -->
+        <footer>
+            <p>&copy; 2025 Nihon no Monogatari. Tous droits réservés.</p>
+        </footer>
+
+        <script src="js/accueil.js"></script>
+    </body>
+</html>

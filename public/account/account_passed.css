@@ -1,0 +1,37 @@
+.account-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+}
+
+.account-sections section {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.account-sections h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.account-sections ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.account-sections li {
+    margin: 5px 0;
+}
+
+.account-sections a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.account-sections a:hover {
+    text-decoration: underline;
+}
