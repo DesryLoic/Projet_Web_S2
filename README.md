@@ -28,6 +28,7 @@ Si vous souhaitez réinitialiser votre niveau d'affinité, vous pouvez utiliser 
 ## 5. Navigation
 Vous pouvez naviguer sur chaque page à l'aide des dfférents onglets présents sur la barre de navigation.
 
+
 ## Les instructions d’installation et d’exécution :
 
 
