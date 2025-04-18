@@ -25,6 +25,8 @@ Ici, vous pourrez interagir avec un petit kitsune pour augmenter son niveau d'af
 Vous pouvez le caresser, le nourrir ou jouer avec en appuyant sur les boutons correspondants.
 Si vous souhaitez réinitialiser votre niveau d'affinité, vous pouvez utiliser le bouton réinitialiser.
 
+## 5. Navigation
+Vous pouvez naviguer sur chaque page à l'aide des dfférents onglets présents sur la barre de navigation.
 
 ## Les instructions d’installation et d’exécution :
 
