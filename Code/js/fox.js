@@ -79,7 +79,7 @@ updateAffectionUI();
     }
 
     function feedFox() {
-        fox.src = "fox-manger.png";
+        fox.src = "../img/kitsune/mange.gif";
         statusMessage.innerText = "Tu as donné une pomme à ton renard ! Il est content !";
         increaseAffection();
     }
@@ -97,7 +97,7 @@ updateAffectionUI();
     }
 
     function resetAffection() {
-        fox.src = "../img/base.gif";
+        fox.src = "../img/kitsune/base.gif";
         affection = 0;
         saveAffection();
         updateAffectionUI();
