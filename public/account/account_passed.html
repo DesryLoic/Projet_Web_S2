@@ -1,55 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Bienvenue</title>
-</head>
-<body>
-    <h1>Bienvenue sur ton compte !</h1>
-    <a href="/logout">Déconnexion</a>
-
-    <div class="account-sections">
-        <!-- Section for Pages Visitées -->
-        <section id="pages-visitees">
-            <h2>Pages Visitées</h2>
-            <ul id="visited-list">
-                <!-- Les pages visitées seront insérées ici dynamiquement -->
-            </ul>
-        </section>
-
-        <!-- Section for Favoris -->
-        <section id="favoris">
-            <h2>Favoris</h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="japon, voyage, tourisme, histoire, kitsune">      <!-- Mots-clés référencement-->
+        <meta name="author" content="lucas">
+        <meta name="description" content="Page de connexion">
+        <link rel="icon" type="image/x-icon" href="../Code/img/torii.png">
+        <link rel="stylesheet" href="../Code/css/css_site.css">
+        <link rel="stylesheet" href="account_passed.css">
+        <title>Bienvenue</title>
+    </head>
+    <header>
+        <div class="logo-container">
+            <img src="../Code/img/torii.png" alt="Logo de Nihon no Monogatari" class="logo">
+        </div>
+        <button class="menu-btn" aria-label="Ouvrir le menu">&#9776;</button>
+        <div class="site-name">
+            <h1>Nihon no Monogatari</h1>
+        </div>
+        <div class="login-container">
+            <button onclick="location.href='../account/account_passed.html'" class="login-btn">Se connecter</button>
+        </div>
+    </header>
+    <body>
+        <nav class="navbar">
             <ul>
-                <!-- Example items, replace with dynamic content if needed -->
-                <li><a href="#">Favori 1</a></li>
-                <li><a href="#">Favori 2</a></li>
-                <li><a href="#">Favori 3</a></li>
+                <li><a href="../Code/accueil.html">Accueil</a></li>
+                <li><a href="../Code/html/frise.html">Histoire</a></li>
+                <li><a href="../Code/html/tourisme.html">Tourisme</a></li>
+                <li><a href="../Code/html/fox.html">Kitsune</a></li>
             </ul>
-        </section>
-    </div>
+        </nav>
+        <main>
+            <h1>Bienvenue sur ton compte !</h1>
+            <a href="/logout">Déconnexion</a>
 
-    <!-- Bouton de redirection vers la page d'accueil -->
-    <a href="../Code/accueil.html" class="btn">Retour à l'accueil</a>
+            <div class="account-sections">
+                <!-- Section for Pages Visitées -->
+                <section id="pages-visitees">
+                    <h2>Pages Visitées</h2>
+                    <ul id="visited-list">
+                        <!-- Les pages visitées seront insérées ici dynamiquement -->
+                    </ul>
+                </section>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        fetch('/account/visited')
-            .then(res => res.json())
-            .then(data => {
-                const ul = document.getElementById('visited-list');
-                ul.innerHTML = '';
-                if (data.visitedPages && data.visitedPages.length) {
-                    data.visitedPages.slice().reverse().forEach(page => {
-                        const li = document.createElement('li');
-                        li.innerHTML = `<a href="${page}">${page}</a>`;
-                        ul.appendChild(li);
+                <!-- Section for Favoris -->
+                <section id="favoris">
+                    <h2>Favoris</h2>
+                    <ul>
+                        <!-- Example items, replace with dynamic content if needed -->
+                        <li><a href="#">Favori 1</a></li>
+                        <li><a href="#">Favori 2</a></li>
+                        <li><a href="#">Favori 3</a></li>
+                    </ul>
+                </section>
+            </div>
+            <!-- Bouton de redirection vers la page d'accueil -->
+            <a href="../Code/accueil.html" class="btn">Retour à l'accueil</a>
+        </main>
+        <footer>
+            <p>&copy; 2025 Nihon no Monogatari. Tous droits réservés.</p>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('/account/visited')
+                    .then(res => res.json())
+                    .then(data => {
+                        const ul = document.getElementById('visited-list');
+                        ul.innerHTML = '';
+                        if (data.visitedPages && data.visitedPages.length) {
+                            data.visitedPages.slice().reverse().forEach(page => {
+                                const li = document.createElement('li');
+                                li.innerHTML = `<a href="${page}">${page}</a>`;
+                                ul.appendChild(li);
+                            });
+                        } else {
+                            ul.innerHTML = '<li>Aucune page visitée récemment.</li>';
+                        }
                     });
-                } else {
-                    ul.innerHTML = '<li>Aucune page visitée récemment.</li>';
-                }
             });
-    });
-    </script>
-</body>
+            // Sélectionner le bouton menu et la barre de navigation
+            const menuBtn = document.querySelector('.menu-btn');
+            const navbar = document.querySelector('.navbar');
+
+            // Ajouter un événement au clic sur le bouton hamburger pour afficher/masquer le menu
+            document.querySelector('.menu-btn').addEventListener('click', function() {
+                document.querySelector('.navbar').classList.toggle('show-menu');
+            });
+        </script>
+    </body>
 </html>

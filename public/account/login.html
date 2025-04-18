@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="japon, voyage, tourisme, histoire, kitsune">      <!-- Mots-clés référencement-->
-    <meta name="author" content="lucas">
-    <meta name="description" content="Page de connexion">
-    <link rel="icon" type="image/x-icon" href="../Code/img/torii.png">
-    <link rel="stylesheet" href="../Code/css/css_site.css">
-    <link rel="stylesheet" href="login.css">
-    <title>Connexion</title>
-</head>
-<header>
-    <div class="logo-container">
-        <img src="../Code/img/torii.png" alt="Logo de Nihon no Monogatari" class="logo">
-    </div>
-    <button class="menu-btn" aria-label="Ouvrir le menu">&#9776;</button>
-    <div class="site-name">
-        <h1>Nihon no Monogatari</h1>
-    </div>
-    <div class="login-container">
-        <button onclick="location.href='../account/account_passed.html'" class="login-btn">Se connecter</button>
-    </div>
-</header>
-<body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="../Code/accueil.html">Accueil</a></li>
-            <li><a href="../Code/html/frise.html">Histoire</a></li>
-            <li><a href="../Code/html/tourisme.html">Tourisme</a></li>
-            <li><a href="../Code/html/fox.html">Kitsune</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h1>Connexion</h1>
-        <form method="POST" action="/login">
-            <label>Email :</label>
-            <input type="email" name="email" required>
-            <br>
-            <label>Mot de passe :</label>
-            <input type="password" name="password" required>
-            <br>
-            <button type="submit">Se connecter</button>
-        </form>
-        <p>Pas encore de compte ? <a class="link" href="register.html">Créer un compte</a></p>
-    </main>
-    <footer>
-        <p>&copy; 2025 Nihon no Monogatari. Tous droits réservés.</p>
-    </footer>
-    <script>
-        // Sélectionner le bouton menu et la barre de navigation
-        const menuBtn = document.querySelector('.menu-btn');
-        const navbar = document.querySelector('.navbar');
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="japon, voyage, tourisme, histoire, kitsune">      <!-- Mots-clés référencement-->
+        <meta name="author" content="lucas">
+        <meta name="description" content="Page de connexion">
+        <link rel="icon" type="image/x-icon" href="../Code/img/torii.png">
+        <link rel="stylesheet" href="../Code/css/css_site.css">
+        <link rel="stylesheet" href="login.css">
+        <title>Connexion</title>
+    </head>
+    <header>
+        <div class="logo-container">
+            <img src="../Code/img/torii.png" alt="Logo de Nihon no Monogatari" class="logo">
+        </div>
+        <button class="menu-btn" aria-label="Ouvrir le menu">&#9776;</button>
+        <div class="site-name">
+            <h1>Nihon no Monogatari</h1>
+        </div>
+        <div class="login-container">
+            <button onclick="location.href='../account/account_passed.html'" class="login-btn">Se connecter</button>
+        </div>
+    </header>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../Code/accueil.html">Accueil</a></li>
+                <li><a href="../Code/html/frise.html">Histoire</a></li>
+                <li><a href="../Code/html/tourisme.html">Tourisme</a></li>
+                <li><a href="../Code/html/fox.html">Kitsune</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Connexion</h1>
+            <form method="POST" action="/login">
+                <label>Email :</label>
+                <input type="email" name="email" required>
+                <br>
+                <label>Mot de passe :</label>
+                <input type="password" name="password" required>
+                <br>
+                <button type="submit">Se connecter</button>
+            </form>
+            <p>Pas encore de compte ? <a class="link" href="register.html">Créer un compte</a></p>
+        </main>
+        <footer>
+            <p>&copy; 2025 Nihon no Monogatari. Tous droits réservés.</p>
+        </footer>
+        <script>
+            // Sélectionner le bouton menu et la barre de navigation
+            const menuBtn = document.querySelector('.menu-btn');
+            const navbar = document.querySelector('.navbar');
 
-        // Ajouter un événement au clic sur le bouton hamburger pour afficher/masquer le menu
-        document.querySelector('.menu-btn').addEventListener('click', function() {
-            document.querySelector('.navbar').classList.toggle('show-menu');
-        });
-    </script>
-</body>
+            // Ajouter un événement au clic sur le bouton hamburger pour afficher/masquer le menu
+            document.querySelector('.menu-btn').addEventListener('click', function() {
+                document.querySelector('.navbar').classList.toggle('show-menu');
+            });
+        </script>
+    </body>
 </html>
